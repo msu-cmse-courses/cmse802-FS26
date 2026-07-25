@@ -1,0 +1,89 @@
+---
+layout: default
+---
+{% assign current_folder = page.path | split: '/' | first %}
+{% assign current_folder_path = current_folder | append: '/' %}
+{% assign guide_pages = site.pages | where: "layout", "guide" | sort: "path" %}
+{% assign section_label = current_folder | replace: '-', ' ' | replace: '_', ' ' %}
+{% assign current_index = -1 %}
+{% for item in guide_pages %}
+  {% if item.url == page.url %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% assign first_page = guide_pages | first %}
+{% assign last_index = guide_pages.size | minus: 1 %}
+{% assign prev_index = current_index | minus: 1 %}
+{% assign next_index = current_index | plus: 1 %}
+{% assign parts = content | split:'<!-- TOC_START -->' %}
+
+<div class="layout">
+  <aside class="left">
+    <nav aria-label="Reference pages">
+      <h2>{{ section_label }}</h2>
+
+      {% if guide_pages.size > 0 %}
+        <ul class="guide-list">
+          {% for item in guide_pages %}
+            {% if item.path contains current_folder_path %}
+              {% assign file_prefix = item.name | split: '-' | first | split: '.' | first %}
+              {% assign nav_order = item.order | default: file_prefix | plus: 0 %}
+              {% assign sublevel = nav_order | modulo: 10 %}
+              <li class="guide-item {% if sublevel == 0 %}guide-item-section{% else %}guide-item-sub{% endif %}">
+                <a href="{{ item.url | relative_url }}" class="guide-link {% if sublevel == 0 %}guide-link-section{% else %}guide-link-sub{% endif %}{% if item.url == page.url %} active{% endif %}" {% if item.url == page.url %}aria-current="page"{% endif %}>
+                  {{ item.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No reference pages have been published yet.</p>
+      {% endif %}
+    </nav>
+  </aside>
+
+  <main id="content" tabindex="-1">
+    {% if current_index >= 0 and guide_pages.size > 0 %}
+      <nav class="page-nav" aria-label="Course guide page navigation">
+        <div>
+          {% if current_index > 0 %}
+            {% assign prev = guide_pages[prev_index] %}
+            <a href="{{ prev.url | relative_url }}">← {{ prev.title }}</a>
+          {% endif %}
+        </div>
+
+        <div>
+          {% if first_page %}
+            <a href="{{ first_page.url | relative_url }}">{{ first_page.title }}</a>
+          {% endif %}
+        </div>
+
+        <div>
+          {% if current_index < last_index %}
+            {% assign next = guide_pages[next_index] %}
+            <a href="{{ next.url | relative_url }}">{{ next.title }} →</a>
+          {% endif %}
+        </div>
+      </nav>
+    {% endif %}
+
+    {{ parts[0] }}
+  </main>
+
+  <aside class="right">
+    {% assign manual_toc = "" %}
+    {% if parts.size > 1 %}
+      {% assign toc_parts = parts[1] | split:'<!-- TOC_END -->' %}
+      {% assign manual_toc = toc_parts[0] | strip %}
+    {% endif %}
+
+    {% if manual_toc != "" %}
+      <nav aria-label="On this page">
+        {{ manual_toc | replace: '<details>', '<details open>' }}
+      </nav>
+    {% else %}
+      {% include auto_toc.html %}
+    {% endif %}
+  </aside>
+</div>

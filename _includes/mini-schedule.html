@@ -1,0 +1,35 @@
+{% assign mini_title = include.title | default: "Mini Schedule" %}
+{% assign keyword_raw = include.keyword | default: "" %}
+{% assign keyword = keyword_raw | upcase %}
+{% assign schedule_items = site.data.schedule | sort: "date" %}
+{% assign match_count = 0 %}
+
+<section class="mini-schedule" aria-label="{{ mini_title }}">
+  <h3>{{ mini_title }}</h3>
+
+  {% if keyword == "" %}
+    <p>Please provide a keyword in the include call, for example: <code>{% raw %}{% include mini-schedule.html keyword="MILESTONE" %}{% endraw %}</code></p>
+  {% else %}
+    <ul>
+      {% for item in schedule_items %}
+        {% assign title_upper = item.title | upcase %}
+        {% if title_upper contains keyword %}
+          {% assign match_count = match_count | plus: 1 %}
+          <li>
+            <span>{{ item.date | date: "%a %m/%d" }}</span>
+            <span> - </span>
+            {% if item.url and item.url != "" %}
+              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {% else %}
+              <span>{{ item.title }}</span>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    {% if match_count == 0 %}
+      <p>No schedule items matched keyword "{{ include.keyword }}".</p>
+    {% endif %}
+  {% endif %}
+</section>

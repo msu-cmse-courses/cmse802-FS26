@@ -1,0 +1,103 @@
+<nav class="auto-toc" aria-label="On this page">
+  <h2>On this page</h2>
+  <details class="auto-toc-details" open>
+    <summary id="auto-toc-summary">Contents</summary>
+    <ul class="auto-toc-list" id="auto-toc-list"></ul>
+  </details>
+</nav>
+
+<style>
+  .auto-toc-list {
+    list-style: none;
+    margin: 0.35rem 0 0;
+    padding-left: 0;
+  }
+
+  .auto-toc-list li {
+    margin: 0.2rem 0;
+  }
+
+  .auto-toc-level-1 {
+    margin-left: 0;
+  }
+
+  .auto-toc-level-2 {
+    margin-left: 0.8rem;
+  }
+
+  .auto-toc-level-3 {
+    margin-left: 1.6rem;
+    font-size: 0.95em;
+  }
+</style>
+
+<script>
+  (function () {
+    const tocList = document.getElementById("auto-toc-list");
+    const tocSummary = document.getElementById("auto-toc-summary");
+    const content = document.getElementById("content");
+
+    if (!tocList || !content) {
+      return;
+    }
+
+    const h1 = content.querySelector("h1");
+    const headings = Array.from(content.querySelectorAll("h2, h3"));
+
+    if (!h1 && headings.length === 0) {
+      const tocContainer = tocList.closest(".auto-toc");
+      if (tocContainer) {
+        tocContainer.hidden = true;
+      }
+      return;
+    }
+
+    function slugify(text) {
+      return text
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-");
+    }
+
+    function addHeading(heading) {
+      const text = (heading.textContent || "").trim();
+      if (!text) {
+        return;
+      }
+
+      if (!heading.id) {
+        heading.id = slugify(text);
+      }
+
+      const li = document.createElement("li");
+      const tag = heading.tagName.toLowerCase();
+      if (tag === "h1") {
+        li.className = "auto-toc-level-1";
+      } else if (tag === "h2") {
+        li.className = "auto-toc-level-2";
+      } else {
+        li.className = "auto-toc-level-3";
+      }
+
+      const link = document.createElement("a");
+      link.href = `#${heading.id}`;
+      link.textContent = text;
+      li.appendChild(link);
+      tocList.appendChild(li);
+    }
+
+    if (h1) {
+      const topText = (h1.textContent || "").trim();
+      if (tocSummary && topText) {
+        tocSummary.textContent = topText;
+      }
+      addHeading(h1);
+    }
+
+    headings.forEach((heading) => {
+      addHeading(heading);
+    });
+  })();
+</script>

@@ -1,0 +1,59 @@
+# Academic Calendar for Fall 2024 Semester
+# This calendar follows MSU's academic schedule and includes all major breaks and holidays
+
+semester_info:
+  name: "Fall 2026"
+  first_day: "2026-08-31"    # Monday of the first week
+  last_day: "2026-12-10"     # Sunday of the last week
+
+# Regular class meeting days
+class_days:
+  - "Tuesday"
+  - "Thursday"
+
+# All breaks and holidays during the semester
+breaks:
+  labor_day:
+    date: "2026-09-07"
+    description: "Labor Day - University Closed"
+  
+  fall_break:
+    start: "2026-10-26"
+    end: "2026-10-27"
+    description: "Fall Break"
+  
+  thanksgiving:
+    start: "2026-11-26"
+    end: "2026-11-27"
+    description: "Thanksgiving Break - University Closed"
+
+# Important academic dates and deadlines
+important_dates:
+  final_exams:
+    start: "2026-12-14"
+    end: "2026-12-18"
+    description: "Final Examinations"
+  
+  commencement:
+    start: "2026-12-18"
+    end: "2026-12-20"
+    description: "Fall Commencement"
+
+# Optional schedule adjustments for real-world changes.
+# - Add a cancelled class date to shift all remaining topics automatically.
+# - Add a day override when one specific DayXX should be attached to a
+#   particular date, status, or note.
+schedule_adjustments:
+  cancelled_classes: []
+  day_overrides: {}
+
+# Example:
+# schedule_adjustments:
+#   cancelled_classes:
+#     - date: "2026-11-10"
+#       reason: "Snow day"
+#   day_overrides:
+#     Day19:
+#       date: "2026-11-12"
+#       status: "moved"
+#       note: "Moved after snow day"

@@ -1,0 +1,757 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <style>
+    :root {
+      --page-bg: #f3f7f2;
+      --panel-bg: #fbfdf9;
+      --panel-alt: #edf4ee;
+      --text: #1b221d;
+      --muted: #5a665f;
+      --border: #cad7cd;
+      --accent: #1f5c45;
+      --accent-hover: #174534;
+      --accent-soft: #ddebe3;
+      --shadow: 0 10px 30px rgba(31, 35, 40, 0.08);
+      --max-width: 1400px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(31, 92, 69, 0.08), transparent 28%),
+        linear-gradient(180deg, #fbfefb 0%, var(--page-bg) 100%);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.16em;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid rgba(31, 92, 69, 0.28);
+      outline-offset: 2px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      z-index: 1001;
+      padding: 0.75rem 1rem;
+      background: var(--panel-bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      transform: translateY(-200%);
+      transition: transform 0.2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .top-nav {
+      position: relative;
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      background: rgba(255, 253, 248, 0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-width: 0;
+    }
+
+    .nav-left img {
+      display: block;
+      width: 3.25rem;
+      height: 3.25rem;
+      object-fit: contain;
+    }
+
+    .site-title {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border: 1px solid var(--border);
+      border-radius: 0.8rem;
+      background: var(--panel-bg);
+      color: var(--text);
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.45rem 0.65rem;
+      border-radius: 0.65rem;
+    }
+
+    .nav-links a.active,
+    .nav-links a[aria-current="page"] {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 12rem;
+    }
+
+    .search-box form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.55rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 0.7rem;
+      background: var(--panel-bg);
+      color: var(--text);
+      font: inherit;
+    }
+
+    #results-container {
+      position: absolute;
+      top: calc(100% + 2.2rem);
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0.5rem;
+      list-style: none;
+      background: var(--panel-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.85rem;
+      box-shadow: var(--shadow);
+      z-index: 1000;
+      max-height: 18rem;
+      overflow-y: auto;
+    }
+
+    #results-container li {
+      padding: 0.25rem 0.25rem;
+    }
+
+    #results-container li[aria-selected="true"] {
+      background: var(--accent-soft);
+      border-radius: 0.5rem;
+    }
+
+    #results-container a {
+      display: block;
+    }
+
+    .search-status {
+      min-height: 1.2em;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    #results-container a {
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.14em;
+      color: var(--accent);
+    }
+
+    #results-container a:hover {
+      color: var(--accent-hover);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 18rem minmax(0, 1fr) 18rem;
+      gap: 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem;
+      align-items: start;
+    }
+
+    .left,
+    .right,
+    main {
+      min-width: 0;
+    }
+
+    .left,
+    .right {
+      position: sticky;
+      top: 1.5rem;
+      max-height: calc(100vh - 3rem);
+      overflow-y: auto;
+      padding: 1rem;
+      background: rgba(255, 253, 248, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .left nav,
+    .right nav {
+      display: block;
+    }
+
+    .left h2,
+    .right h2 {
+      margin: 0 0 0.75rem;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 1rem;
+    }
+
+    .left ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .left li {
+      margin: 0.35rem 0;
+    }
+
+    .left a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .left .guide-list {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .left .guide-item {
+      margin: 0.15rem 0;
+    }
+
+    .left .guide-item-section {
+      margin-top: 0.75rem;
+      padding-top: 0.55rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    .left .guide-item-section:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .left .guide-item-sub {
+      margin-left: 0.9rem;
+    }
+
+    .left .guide-link {
+      display: block;
+      text-decoration: none;
+      border-radius: 0.35rem;
+      padding: 0.12rem 0.3rem;
+    }
+
+    .left .guide-link-section {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .left .guide-link-sub {
+      font-size: 0.95rem;
+    }
+
+    .left .guide-link:hover {
+      text-decoration: underline;
+    }
+
+    .left a.active,
+    .left a[aria-current="page"] {
+      color: var(--accent-hover);
+      font-weight: 700;
+      background: var(--accent-soft);
+      padding: 0.1rem 0.3rem;
+      border-radius: 0.35rem;
+    }
+
+    .left a:hover {
+      color: var(--accent-hover);
+    }
+
+    .sched-item {
+      margin: 0 0 0.5rem;
+      padding: 0.35rem 0 0.45rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .sched-item:last-of-type {
+      margin-bottom: 0.25rem;
+    }
+
+    .sched-date-line {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--muted);
+      line-height: 1.2;
+    }
+
+    .sched-title-line {
+      margin-top: 0.2rem;
+      margin-left: 0.75rem;
+      line-height: 1.35;
+      font-size: 0.95rem;
+      overflow-wrap: anywhere;
+    }
+
+    .sched-title-line a {
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.14em;
+    }
+
+    main {
+      padding: 1.25rem;
+      background: var(--panel-bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    main img {
+      display: block;
+      margin: 1.25rem auto;
+    }
+
+    .left-image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .left-image img {
+      display: block;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .page-nav {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: 0.75rem;
+      align-items: center;
+      margin: 0 0 1.25rem;
+      padding: 0.85rem 1rem;
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 0.85rem;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .page-nav > div:nth-child(2) {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .page-nav > div:last-child {
+      text-align: right;
+    }
+
+    .page-nav a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .page-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .right :is(ul, ol) {
+      padding-left: 1.1rem;
+    }
+
+    .site-footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    .footer-content {
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: rgba(255, 253, 248, 0.88);
+      color: var(--muted);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .footer-content p {
+      margin: 0 0 0.75rem;
+    }
+
+    .footer-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer-license img {
+      vertical-align: middle;
+    }
+
+    @media (max-width: 900px) {
+      .top-nav {
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background: var(--panel-bg);
+        border: 1px solid var(--border);
+        border-radius: 0.9rem;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+      }
+
+      .search-box {
+        min-width: 0;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .left,
+      .right {
+        position: static;
+        max-height: none;
+      }
+
+      .page-nav {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .sched-title-line {
+        margin-left: 0.45rem;
+      }
+
+      .page-nav > div:nth-child(2),
+      .page-nav > div:last-child {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="top-nav">
+    <div class="nav-left">
+      <a href="{{ '/' | relative_url }}" aria-label="Go to the schedule home page">
+        <img src="{{ '/assets/img/MSU.png' | relative_url }}" alt="Michigan State University logo">
+      </a>
+      <div class="site-title">{{ site.title | default: "Course Website" }}</div>
+    </div>
+
+    <div class="nav-right">
+      <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+
+      <nav id="nav-links" class="nav-links" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}" {% if page.layout == "schedule" %}class="active" aria-current="page"{% endif %}>Schedule</a>
+
+        {% assign guide_root_candidates = site.pages | where: "layout", "guide" | sort: "path" %}
+        {% for item in guide_root_candidates %}
+          {% assign prefix = item.name | split: '-' | first | split: '.' | first %}
+          {% if prefix == "00" %}
+            {% assign folder_name = item.path | split: '/' | first %}
+            {% assign folder_path_token = folder_name | append: '/' %}
+            {% assign label = folder_name | replace: '-', ' ' | replace: '_', ' ' %}
+            <a href="{{ item.url | relative_url }}" {% if page.path contains folder_path_token %}class="active" aria-current="page"{% endif %}>{{ label }}</a>
+          {% endif %}
+        {% endfor %}
+        <div class="search-box">
+          <form role="search" action="{{ '/search.json' | relative_url }}" onsubmit="return false;">
+            <label class="sr-only" for="search-input">Search site</label>
+            <input type="search" id="search-input" placeholder="Search site..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" aria-controls="results-container" aria-describedby="search-status">
+            <div id="search-status" class="search-status" aria-live="polite"></div>
+            <ul id="results-container" role="listbox" hidden></ul>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>This course website is a reusable template for schedule-first course delivery.</p>
+      <p class="footer-license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+      {% if site.github and site.github.repository_url %}
+      <p>Suggestions and improvements are welcome via the <a href="{{ site.github.repository_url }}">GitHub repository</a>.</p>
+      {% endif %}
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const input = document.getElementById("search-input");
+      const results = document.getElementById("results-container");
+      const status = document.getElementById("search-status");
+      let pages = [];
+      let activeIndex = -1;
+
+      function escapeHtml(value) {
+        return value
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function closeResults() {
+        results.hidden = true;
+        input.setAttribute("aria-expanded", "false");
+        input.removeAttribute("aria-activedescendant");
+        activeIndex = -1;
+      }
+
+      function openResults() {
+        if (results.children.length > 0) {
+          results.hidden = false;
+          input.setAttribute("aria-expanded", "true");
+        }
+      }
+
+      function updateStatus(message) {
+        status.textContent = message;
+      }
+
+      function renderResults(matches) {
+        results.innerHTML = matches.map((page, index) => {
+          const title = escapeHtml(page.title || "Untitled page");
+          const url = escapeHtml(page.url || "#");
+          return `<li id="search-option-${index}" role="option" aria-selected="false"><a href="${url}">${title}</a></li>`;
+        }).join("");
+
+        if (matches.length === 0) {
+          results.innerHTML = "";
+          closeResults();
+          updateStatus("No results found");
+          return;
+        }
+
+        results.hidden = false;
+        input.setAttribute("aria-expanded", "true");
+        activeIndex = -1;
+        updateStatus(`${matches.length} result${matches.length === 1 ? "" : "s"} available`);
+      }
+
+      function setActiveIndex(nextIndex) {
+        const items = Array.from(results.querySelectorAll('[role="option"]'));
+
+        if (items.length === 0) {
+          return;
+        }
+
+        activeIndex = (nextIndex + items.length) % items.length;
+
+        items.forEach((item, index) => {
+          const isActive = index === activeIndex;
+          item.setAttribute("aria-selected", isActive ? "true" : "false");
+          if (isActive) {
+            input.setAttribute("aria-activedescendant", item.id);
+            item.scrollIntoView({ block: "nearest" });
+          }
+        });
+      }
+
+      function searchPages(query) {
+        const normalized = query.trim().toLowerCase();
+
+        if (!normalized) {
+          results.innerHTML = "";
+          closeResults();
+          updateStatus("");
+          return;
+        }
+
+        const matches = pages.filter((page) => {
+          const haystack = `${page.title || ""} ${page.content || ""}`.toLowerCase();
+          return haystack.includes(normalized);
+        }).slice(0, 10);
+
+        renderResults(matches);
+      }
+
+      fetch("{{ '/search.json' | relative_url }}")
+        .then((response) => response.json())
+        .then((data) => {
+          pages = Array.isArray(data) ? data : [];
+        })
+        .catch(() => {
+          updateStatus("Search is unavailable right now");
+        });
+
+      if (input && results && status) {
+        input.addEventListener("input", function () {
+          searchPages(this.value);
+        });
+
+        input.addEventListener("keydown", function (event) {
+          const hasResults = results.children.length > 0 && !results.hidden;
+
+          if (!hasResults && (event.key === "ArrowDown" || event.key === "ArrowUp")) {
+            return;
+          }
+
+          switch (event.key) {
+            case "ArrowDown":
+              event.preventDefault();
+              setActiveIndex(activeIndex + 1);
+              break;
+            case "ArrowUp":
+              event.preventDefault();
+              setActiveIndex(activeIndex - 1);
+              break;
+            case "Enter": {
+              if (activeIndex >= 0) {
+                event.preventDefault();
+                const activeLink = results.querySelectorAll('a')[activeIndex];
+                if (activeLink) {
+                  window.location.href = activeLink.href;
+                }
+              }
+              break;
+            }
+            case "Escape":
+              closeResults();
+              break;
+          }
+        });
+
+        input.addEventListener("focus", function () {
+          if (this.value.trim()) {
+            openResults();
+          }
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest(".search-box")) {
+            closeResults();
+          }
+        });
+      }
+    });
+
+    function toggleMenu(button) {
+      const nav = document.getElementById("nav-links");
+      const expanded = nav.classList.toggle("open");
+      button.setAttribute("aria-expanded", expanded ? "true" : "false");
+    }
+  </script>
+</body>
+</html>

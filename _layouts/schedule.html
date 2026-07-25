@@ -1,0 +1,110 @@
+---
+layout: default
+---
+{% assign parts = content | split: '<!-- TOC_START -->' %}
+{% assign schedule_items = site.data.schedule | sort: "date" %}
+{% assign prev_item = nil %}
+{% assign next_item = nil %}
+{% assign found_current = false %}
+{% assign page_url_norm = page.url | replace: '.html', '' | replace: '/index', '' %}
+{% assign page_url_norm_slash = page_url_norm | append: '/' %}
+{% for item in schedule_items %}
+	{% if item.url and item.url != "" %}
+		{% assign item_url_norm = item.url | replace: '.html', '' | replace: '/index', '' %}
+		{% assign item_url_norm_slash = item_url_norm | append: '/' %}
+		{% assign item_matches_current = false %}
+		{% if item.url == page.url or item_url_norm == page_url_norm or item_url_norm == page_url_norm_slash or item_url_norm_slash == page_url_norm %}
+			{% assign item_matches_current = true %}
+		{% endif %}
+
+		{% if item_matches_current %}
+			{% assign found_current = true %}
+		{% elsif found_current and next_item == nil %}
+			{% assign next_item = item %}
+			{% break %}
+		{% elsif found_current == false %}
+			{% assign prev_item = item %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
+
+<div class="layout">
+	<aside class="left">
+		{% if schedule_items and schedule_items.size > 0 %}
+			{% assign current_week = "" %}
+			{% for item in schedule_items %}
+				{% if item.week_start != current_week %}
+					{% assign current_week = item.week_start %}
+					<h2>Week of {{ item.week_start | date: "%B %-d" }}</h2>
+				{% endif %}
+				{% assign item_url_norm = item.url | replace: '.html', '' | replace: '/index', '' %}
+				{% assign item_url_norm_slash = item_url_norm | append: '/' %}
+				{% assign item_is_active = false %}
+				{% if item.url == page.url or item_url_norm == page_url_norm or item_url_norm == page_url_norm_slash or item_url_norm_slash == page_url_norm %}
+					{% assign item_is_active = true %}
+				{% endif %}
+				<div class='sched-item'>
+					<div class='sched-date-line'><time datetime='{{ item.date }}'>{{ item.date | date: "%a %m/%d" }}</time></div>
+					<div class='sched-title-line'>{% if item.url and item.url != "" %}<a href="{{ item.url | relative_url }}" {% if item_is_active %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</div>
+				</div>
+			{% endfor %}
+		{% elsif schedule_pages and schedule_pages.size > 0 %}
+			<h2>Assignments</h2>
+			<ul>
+				{% for item in schedule_pages %}
+					{% assign item_url_norm = item.url | replace: '.html', '' | replace: '/index', '' %}
+					{% assign item_url_norm_slash = item_url_norm | append: '/' %}
+					{% assign item_is_active = false %}
+					{% if item.url == page.url or item_url_norm == page_url_norm or item_url_norm == page_url_norm_slash or item_url_norm_slash == page_url_norm %}
+						{% assign item_is_active = true %}
+					{% endif %}
+					<li>
+						<a href="{{ item.url | relative_url }}" {% if item_is_active %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p>No schedule items have been published yet.</p>
+		{% endif %}
+	</aside>
+
+	<main id="content" tabindex="-1">
+		{% if found_current %}
+			<nav class="page-nav" aria-label="Schedule assignment navigation">
+				<div>
+					{% if prev_item %}
+						<a href="{{ prev_item.url | relative_url }}">← {{ prev_item.date | date: "%a %m/%d" }}</a>
+					{% endif %}
+				</div>
+
+				<div>
+					<a href="{{ '/' | relative_url }}">Full Schedule</a>
+				</div>
+
+				<div>
+					{% if next_item %}
+						<a href="{{ next_item.url | relative_url }}">{{ next_item.date | date: "%a %m/%d" }} →</a>
+					{% endif %}
+				</div>
+			</nav>
+		{% endif %}
+
+		{{ parts[0] }}
+	</main>
+
+	<aside class="right">
+		{% assign manual_toc = "" %}
+		{% if parts.size > 1 %}
+			{% assign toc_parts = parts[1] | split:'<!-- TOC_END -->' %}
+			{% assign manual_toc = toc_parts[0] | strip %}
+		{% endif %}
+
+		{% if manual_toc != "" %}
+			<nav aria-label="On this page">
+				{{ manual_toc | replace: '<details>', '<details open>' }}
+			</nav>
+		{% else %}
+			{% include auto_toc.html %}
+		{% endif %}
+	</aside>
+</div>

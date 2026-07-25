@@ -1,0 +1,30 @@
+semester_info:
+  name: "Spring 2025"
+  first_day: "2025-01-13"    # Classes begin on Monday, January 13
+  last_day: "2025-04-27"     # Classes end on Sunday, April 27
+
+class_days:
+  - "Tuesday"
+  - "Thursday"
+
+breaks:
+  mlk_day:
+    date: "2025-01-20"
+    description: "Martin Luther King Jr. Day - University Closed"
+  spring_break:
+    start: "2025-03-02"
+    end: "2025-03-09"
+    description: "Spring Break"
+  classes_not_held:
+    date: "2025-02-13"
+    description: "Classes Not Held"
+
+important_dates:
+  final_exams:
+    start: "2025-04-28"
+    end: "2025-05-02"
+    description: "Final Examinations"
+  commencement:
+    start: "2025-05-02"
+    end: "2025-05-04"
+    description: "Spring Commencement"
