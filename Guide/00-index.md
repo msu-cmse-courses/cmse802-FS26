@@ -4,15 +4,31 @@ title: "Guide Overview"
 order: 0
 mode: "guide"
 ---
-# Guide Overview
 
-**⚠️TODO:** This is example Guide content. Remove this file and replace it with your own course guide overview.
+CMSE 802 serves graduate students, especially PhD students, who are not primarily trained as software engineers but who must build software to complete meaningful research.
 
-CMSE 495 is a team-based, project-driven course. This guide serves as a reference for how the course operates throughout the semester.
+This course should feel like a dissertation writing seminar, but for research software:
+- grounded in each student's own research context
+- focused on sustained project progress
+- structured around practical feedback, iteration, and reflection
 
-You are not expected to read every page at once. Instead, use the guide when you need clarification, structure, or examples.
+The central commitment is that students leave the course with software that genuinely advances their research, not just with completed assignments.
 
-The course schedule tells you what needs to be done. The guide explains how and why we do it.
+New PhD Students, Masters Students and Advanced Undergraduate students that end up taking this course should work with the instructor to make sure they have an approriate, real world, software project that will help them meet the learning goals for the course.  Ideally this project will be picked out **BEFORE** the first day of class.  
+
+## Core Identity
+This is a scientific software writing course with computational modeling as the conceptual lens.
+
+The software mantra is:
+
+**Safe, Portable, Reproducible, Robust, and Literate**
+
+These values should be visible in all course artifacts: team exercises, individual project repositories, reflections, and final deliverables.
+
+## Expectations
+
+Students are expected to attend class every day OR notify the instructor when they can not attend.  
+
 
 ## How to Use This Guide
 

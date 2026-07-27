@@ -1,9 +1,6 @@
 <nav class="auto-toc" aria-label="On this page">
   <h2>On this page</h2>
-  <details class="auto-toc-details" open>
-    <summary id="auto-toc-summary">Contents</summary>
-    <ul class="auto-toc-list" id="auto-toc-list"></ul>
-  </details>
+  <ul class="auto-toc-list" id="auto-toc-list"></ul>
 </nav>
 
 <style>
@@ -13,38 +10,48 @@
     padding-left: 0;
   }
 
-  .auto-toc-list li {
+  .auto-toc-list > li {
+    margin: 0.25rem 0;
+  }
+
+  .auto-toc-list ul {
+    list-style: none;
+    margin: 0.2rem 0 0;
+    padding-left: 1rem;
+    border-left: 1px solid var(--border);
+  }
+
+  .auto-toc-list ul > li {
     margin: 0.2rem 0;
   }
 
   .auto-toc-level-1 {
-    margin-left: 0;
+    font-weight: 600;
   }
 
   .auto-toc-level-2 {
-    margin-left: 0.8rem;
+    font-weight: 500;
   }
 
   .auto-toc-level-3 {
-    margin-left: 1.6rem;
     font-size: 0.95em;
+    color: var(--muted);
+    font-weight: 400;
   }
 </style>
 
 <script>
   (function () {
     const tocList = document.getElementById("auto-toc-list");
-    const tocSummary = document.getElementById("auto-toc-summary");
     const content = document.getElementById("content");
 
     if (!tocList || !content) {
       return;
     }
 
-    const h1 = content.querySelector("h1");
-    const headings = Array.from(content.querySelectorAll("h2, h3"));
+    const headings = Array.from(content.querySelectorAll("h1, h2, h3"));
 
-    if (!h1 && headings.length === 0) {
+    if (headings.length === 0) {
       const tocContainer = tocList.closest(".auto-toc");
       if (tocContainer) {
         tocContainer.hidden = true;
@@ -72,29 +79,42 @@
       }
 
       const li = document.createElement("li");
-      const tag = heading.tagName.toLowerCase();
-      if (tag === "h1") {
-        li.className = "auto-toc-level-1";
-      } else if (tag === "h2") {
-        li.className = "auto-toc-level-2";
-      } else {
-        li.className = "auto-toc-level-3";
-      }
-
       const link = document.createElement("a");
       link.href = `#${heading.id}`;
       link.textContent = text;
       li.appendChild(link);
-      tocList.appendChild(li);
+
+      const tag = heading.tagName.toLowerCase();
+      let childList = null;
+
+      if (tag === "h1") {
+        li.className = "auto-toc-level-1";
+        childList = document.createElement("ul");
+        li.appendChild(childList);
+        tocList.appendChild(li);
+        state.currentH1Parent = childList;
+        state.currentH2Parent = childList;
+        return;
+      } else if (tag === "h2") {
+        li.className = "auto-toc-level-2";
+        childList = document.createElement("ul");
+        li.appendChild(childList);
+        (state.currentH1Parent || tocList).appendChild(li);
+        state.currentH2Parent = childList;
+        state.currentH3Parent = childList;
+        return;
+      } else {
+        li.className = "auto-toc-level-3";
+      }
+
+      (state.currentH3Parent || state.currentH2Parent || state.currentH1Parent || tocList).appendChild(li);
     }
 
-    if (h1) {
-      const topText = (h1.textContent || "").trim();
-      if (tocSummary && topText) {
-        tocSummary.textContent = topText;
-      }
-      addHeading(h1);
-    }
+    const state = {
+      currentH1Parent: null,
+      currentH2Parent: null,
+      currentH3Parent: null,
+    };
 
     headings.forEach((heading) => {
       addHeading(heading);

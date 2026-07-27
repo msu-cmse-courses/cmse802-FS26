@@ -1,3 +1,15 @@
+- warning: 'Studio01_Repro_Baseline.md: Filename does not match convention. Expected
+    one of: NN-class-*, NN-same-*, NN-plus-D-*, NN-next-WDAY-*'
+- warning: 'Studio02_AI_Validation.md: Filename does not match convention. Expected
+    one of: NN-class-*, NN-same-*, NN-plus-D-*, NN-next-WDAY-*'
+- warning: 'Studio03_Packaging_and_Interfaces.md: Filename does not match convention.
+    Expected one of: NN-class-*, NN-same-*, NN-plus-D-*, NN-next-WDAY-*'
+- warning: 'Studio04_Verification_and_Unit_Tests.md: Filename does not match convention.
+    Expected one of: NN-class-*, NN-same-*, NN-plus-D-*, NN-next-WDAY-*'
+- warning: 'Studio05_Repro_Audit.md: Filename does not match convention. Expected
+    one of: NN-class-*, NN-same-*, NN-plus-D-*, NN-next-WDAY-*'
+- warning: 'Studio06_AI_Reflection.md: Filename does not match convention. Expected
+    one of: NN-class-*, NN-same-*, NN-plus-D-*, NN-next-WDAY-*'
 - warning: 'Day04: missing NN-class-* file; inserted TBD entry'
 - warning: 'Day06: missing NN-class-* file; inserted TBD entry'
 - warning: 'Day07: missing NN-class-* file; inserted TBD entry'
