@@ -1,8 +1,5 @@
 ---
 layout: guide
-title: "Guide Overview"
-order: 0
-mode: "guide"
 ---
 
 CMSE 802 serves graduate students, especially PhD students, who are not primarily trained as software engineers but who must build software to complete meaningful research.

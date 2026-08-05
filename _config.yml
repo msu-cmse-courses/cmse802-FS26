@@ -2,7 +2,7 @@ theme: jekyll-theme-minimal
 title: "CMSE 802: Methods in Computational Modeling"
 description: "This course introduces students to the principles and practices of computational modeling in scientific research. Students will learn to develop, analyze, and validate models across various domains, including analytical, physical, and data-driven approaches. The course emphasizes reproducibility, software engineering best practices, and the integration of generative AI tools in scientific workflows."
 logo: /assets/img/CMSE.png
-baseurl: /CMSE802-FS26
+baseurl: /cmse802-FS26
 permalink: /:year/:month/:day/:title
 exclude:
   - envs/

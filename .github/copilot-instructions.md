@@ -43,6 +43,14 @@ Follow these writing and structure preferences for generated course documents:
 - Prefer concise, operational language over abstract or verbose framing.
 - Include practical implementation details (timing, evidence, workflow steps).
 
+For student-facing class-day schedule pages and course descriptions:
+- Keep pages short, simple, and reference-like rather than essay-like.
+- Prefer a consistent structure: H1 title, timed agenda, 1 to 2 learning goals, short section blocks, and a brief "Before Next Class" list when needed.
+- Keep daily learning goals minimal. Do not expand them into long competency lists unless the user explicitly asks.
+- Focus on what students will do, discuss, or prepare, not on internal course design rationale.
+- Match the tone and formatting of nearby day pages unless the user asks for a new pattern.
+- Leave room for instructor flexibility when a class may pivot based on student projects, background, or shared tool needs.
+
 ## Curriculum Guardrails
 Keep scope controlled. Avoid overbuilding.
 
