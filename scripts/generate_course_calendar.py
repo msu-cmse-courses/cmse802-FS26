@@ -86,6 +86,28 @@ def format_date(value: str) -> dt.date:
     return dt.datetime.strptime(value, "%Y-%m-%d").date()
 
 
+def stable_dtstamp_for_schedule(schedule: list[Any]) -> str:
+    """Return a deterministic DTSTAMP so unchanged schedules produce unchanged ICS output."""
+
+    dates: list[dt.date] = []
+    for item in schedule:
+        if not isinstance(item, dict):
+            continue
+        raw_date = item.get("date")
+        if not raw_date:
+            continue
+        try:
+            dates.append(format_date(str(raw_date)))
+        except ValueError:
+            continue
+
+    if not dates:
+        return "19700101T000000Z"
+
+    latest = max(dates)
+    return f"{latest.strftime('%Y%m%d')}T000000Z"
+
+
 def uid_for_event(item: dict[str, Any]) -> str:
     key = "|".join(
         [
@@ -158,7 +180,7 @@ def generate_ics(
     config = load_yaml(config_path) or {}
 
     baseurl = normalize_baseurl(str(config.get("baseurl", "")))
-    now_utc = dt.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+    dtstamp = stable_dtstamp_for_schedule(schedule)
 
     lines: list[str] = [
         "BEGIN:VCALENDAR",
@@ -179,7 +201,7 @@ def generate_ics(
             continue
 
         full_url = combine_url(site_url, baseurl, item.get("url"))
-        event_lines = build_event_lines(item, class_start, class_end, full_url, now_utc)
+        event_lines = build_event_lines(item, class_start, class_end, full_url, dtstamp)
         lines.extend(event_lines)
 
     lines.append("END:VCALENDAR")
