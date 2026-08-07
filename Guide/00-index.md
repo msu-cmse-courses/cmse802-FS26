@@ -33,6 +33,17 @@ Students are expected to attend class every day OR notify the instructor when th
 
 Most students should start with the Syllabus, Weekly Routine, and Course Milestone Roadmap. The remaining pages are intended to be used as references when questions arise about communication, teamwork, project organization, technical practices, or course expectations.
 
+## Major In-Class Project Sequence
+
+Most of the semester will center on four major in-class assignments. Each assignment is designed for approximately four class periods (about two weeks) and is organized around a dedicated repository.
+
+1. [Modeling Intro Project](./02-Modeling-Intro-Project)
+2. [Analytical Modeling Project](./03-Analytical-Modeling-Project)
+3. [Physical Modeling Project](./04-Physical-Modeling-Project)
+4. [Data-Driven Modeling Project](./05-Data-Driven-Modeling-Project)
+
+Each project page gives a short overview and links to the repository where day-to-day work will happen.
+
 This guide is organized to reduce duplication. Concepts are generally explained in one place and referenced elsewhere. If you find something that is unclear, outdated, inconsistent, or missing, please let the instructional team know or submit an issue through the course repository.
 
 ## A Note About Professional Judgment
