@@ -16,6 +16,8 @@ New PhD Students, Masters Students and Advanced Undergraduate students that end 
 ## Core Identity
 This is a scientific software writing course with computational modeling as the conceptual lens.
 
+In this course, we use **Analytical, Physical, and Data-Driven** as a practical component convention for discussing models. Many projects can be described as a mixture of these components, while some projects will not fit this framing cleanly at every stage.
+
 The software mantra is:
 
 **Safe, Portable, Reproducible, Robust, and Literate**
@@ -24,7 +26,7 @@ These values should be visible in all course artifacts: team exercises, individu
 
 ## Expectations
 
-Students are expected to attend class every day OR notify the instructor when they can not attend.  
+Students are expected to attend class every day OR notify the instructor when they can not attend and make up any work in class. Class works better if you are there but the instructor understands that graduate students are busy.  Please do not be lazy. 
 
 
 ## How to Use This Guide

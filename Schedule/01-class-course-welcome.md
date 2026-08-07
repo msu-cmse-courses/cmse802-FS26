@@ -33,7 +33,7 @@ The Syllabus can be found in the Course Guide here:
 We will review the course syllabus and the instructor will try to answer any questions you may have. 
 - The course centers on your own research context.
 - Weekly (out of class) work should support progress on software you already need.
-- In class activities will focus on learning different types of and practicing
+- In-class activities will focus on modeling components, software workflow practice, and research-aligned project progress.
 
 ## 3. Student Introductions and Research
 

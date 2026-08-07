@@ -59,13 +59,13 @@ By the end of this course, you should be able to:
 - Build research software that is usable beyond one-off scripts.
 - Apply sustainable software engineering workflows to your own research code.
 - Use AI assistants responsibly with explicit validation and trust calibration.
-- Explain how physical, analytical, and data-driven modeling approaches connect to your research questions.
+- Explain how Analytical, Physical, and Data-Driven components combine in models connected to your research questions.
 - Deliver a final software project with clear evidence of software quality and reproducibility.
 
 ### Primary topics
 
 - Research software engineering workflows (version control, modular design, testing, documentation, review).
-- Conceptual modeling fluency (physical, analytical, and data-driven methods).
+- Conceptual modeling fluency using Analytical, Physical, and Data-Driven components as a working convention to guide discussion and design choices.
 - Reproducibility practices (environment strategy, run instructions, evidence capture).
 - Collaborative development and handoff quality.
 

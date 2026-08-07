@@ -8,7 +8,7 @@ mode: "schedule"
 
 CMSE 802 is a graduate course in research software engineering taught through the lens of computational modeling. The course is designed for students who are building software as part of real research work and need a workflow that is practical, rigorous, and sustainable.
 
-Students will develop and evaluate models across analytical, physical, and data-driven approaches while strengthening day-to-day engineering practice. Throughout the semester, course activities and project milestones emphasize the shared software quality standards of this course:
+Students will develop and evaluate models using an Analytical/Physical/Data-Driven component convention, with emphasis on how many projects mix these elements in practice. This convention is used to guide course thinking and discussion, not to force every project into a rigid model. Throughout the semester, course activities and project milestones emphasize the shared software quality standards of this course:
 
 - Safe
 - Portable
