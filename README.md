@@ -94,6 +94,34 @@ Build static site output into `_site/`:
 make build-site
 ```
 
+## Optional: Automatic Reminder Before Push
+
+If you want an automated reminder, you can enable a local Git pre-push hook that checks schedule artifacts before every push.
+
+Install it once:
+
+```bash
+./scripts/install_git_hooks.sh
+```
+
+What it does on `git push`:
+
+- runs `make schedule-fall` (or another target you set)
+- checks whether generated files changed
+- blocks push if updates are needed so you can commit them first
+
+Generated files checked:
+
+- `_data/schedule.yml`
+- `_data/schedule_warnings.yml`
+- `course_calendar.ics`
+
+If you need spring generation for a specific push:
+
+```bash
+SCHEDULE_MAKE_TARGET=schedule-spring git push
+```
+
 ## GitHub Pages Recommendation
 
 Use `main` as source branch and publish from the repository root.
