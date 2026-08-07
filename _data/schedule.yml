@@ -18,26 +18,26 @@
   day_id: null
 - date: '2026-09-08'
   week_start: '2026-09-07'
-  title: Project Review Workshop
-  url: /Schedule/03-class-project-review-workshop
+  title: Modeling Intro Notebook Day 1
+  url: /Schedule/03-class-modeling-intro-repo-workday-1
   event_type: class
   day_id: Day03
 - date: '2026-09-10'
   week_start: '2026-09-07'
-  title: TBD
-  url: null
+  title: Modeling Intro Notebook Day 2
+  url: /Schedule/04-class-modeling-intro-repo-workday-2
   event_type: class
   day_id: Day04
 - date: '2026-09-15'
   week_start: '2026-09-14'
-  title: Project Preferences and Team Formation Inputs
-  url: /Schedule/05-class-project-preferences
+  title: Modeling Intro Notebook Day 3
+  url: /Schedule/05-class-modeling-intro-repo-workday-3
   event_type: class
   day_id: Day05
 - date: '2026-09-17'
   week_start: '2026-09-14'
-  title: TBD
-  url: null
+  title: 'Modeling Intro Flex Day: Catch-Up or Project Discussion'
+  url: /Schedule/06-class-modeling-intro-flex-day
   event_type: class
   day_id: Day06
 - date: '2026-09-22'
