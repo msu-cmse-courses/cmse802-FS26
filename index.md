@@ -6,25 +6,21 @@ mode: "schedule"
 ---
 # Course Description
 
-{% include schedule_widgets.html part="progress" %}
+CMSE 802 is a graduate course in research software engineering taught through the lens of computational modeling. The course is designed for students who are building software as part of real research work and need a workflow that is practical, rigorous, and sustainable.
 
-**⚠️TODO:** This is example homepage content. Replace this page with your own course introduction.
+Students will develop and evaluate models across analytical, physical, and data-driven approaches while strengthening day-to-day engineering practice. Throughout the semester, course activities and project milestones emphasize the shared software quality standards of this course:
 
-Suggested first edits:
+- Safe
+- Portable
+- Reproducible
+- Robust
+- Literate
 
-1. Update this page title and course description for your class.
-2. Update class time/location in the calendar include parameters below.
-3. Keep or remove the progress bar and calendar widgets as needed.
-4. Review Guide and Schedule example files and replace them with your content.
-5. Re-run `make schedule-fall` or `make schedule-spring` after content changes.
+The main objective is not to complete disconnected assignments. The objective is to make measurable progress on research-relevant software that another teammate could run, understand, and extend.
 
-## Navigating This Website
+This site is organized around the semester schedule. Use the class calendar and schedule pages as the primary source for weekly expectations, deadlines, and links to class materials.
 
-Students should use the schedule to plan for the semester. Links will appear as instructors add assignments for the semester. Please review this page regularly for updates.
-
-Select the [Course Guide](./Guide/00-index) in the menu above to navigate to learn more about the course. This guide includes the syllabus as well as general policies and procedures that students must follow.  
-
-The Table of Contents is provided to help student navigate individual pages. 
+For course policies, workflow expectations, and reference material, start with the [Course Guide](./Guide/00-index).
 
 {% include schedule_widgets.html part="calendar" calendar_title="Course Calendar Draft" class_time="12:30 PM - 1:40 PM" class_location="EGR 1145" subscription_path="/course_calendar.ics" %}
 {% include schedule_widgets.html part="assets" class_time="12:30 PM - 1:40 PM" class_location="EGR 1145" %}
