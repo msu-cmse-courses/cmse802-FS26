@@ -31,9 +31,9 @@ DTSTART;VALUE=DATE:20260907
 DTEND;VALUE=DATE:20260908
 END:VEVENT
 BEGIN:VEVENT
-UID:323970d626de18c3cc887172849cf704738526cc@course-website-template
+UID:62b56cd5cf324eaafe7b43628cc4dbd2c2bc8c30@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Modeling Intro Notebook Day 1
+SUMMARY:Modeling Intro - Day 1
 DTSTART:20260908T123000
 DTEND:20260908T134000
 DESCRIPTION:Course day: Day03\\nDetails: /cmse802-FS26/Schedule/03-class-mo
@@ -41,9 +41,9 @@ DESCRIPTION:Course day: Day03\\nDetails: /cmse802-FS26/Schedule/03-class-mo
 URL:/cmse802-FS26/Schedule/03-class-modeling-intro-repo-workday-1
 END:VEVENT
 BEGIN:VEVENT
-UID:544aeee314e7c25076a646ea930efdb8820ce14a@course-website-template
+UID:92647e70d4c36964d7190ddaac3a6c1cb42b86db@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Modeling Intro Notebook Day 2
+SUMMARY:Modeling Intro - Day 2
 DTSTART:20260910T123000
 DTEND:20260910T134000
 DESCRIPTION:Course day: Day04\\nDetails: /cmse802-FS26/Schedule/04-class-mo
@@ -51,9 +51,9 @@ DESCRIPTION:Course day: Day04\\nDetails: /cmse802-FS26/Schedule/04-class-mo
 URL:/cmse802-FS26/Schedule/04-class-modeling-intro-repo-workday-2
 END:VEVENT
 BEGIN:VEVENT
-UID:cd4727bbbf3d011cac4ba9c710a93a0f60a4a184@course-website-template
+UID:52e588aaf232e6a920ef63f405a421135fd6bcb8@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Modeling Intro Notebook Day 3
+SUMMARY:Modeling Intro - Day 3
 DTSTART:20260915T123000
 DTEND:20260915T134000
 DESCRIPTION:Course day: Day05\\nDetails: /cmse802-FS26/Schedule/05-class-mo
@@ -69,6 +69,16 @@ DTEND:20260917T134000
 DESCRIPTION:Course day: Day06\\nDetails: /cmse802-FS26/Schedule/06-class-mo
  deling-intro-flex-day
 URL:/cmse802-FS26/Schedule/06-class-modeling-intro-flex-day
+END:VEVENT
+BEGIN:VEVENT
+UID:f721253dd2de94f017ac8210810313034efa9edc@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 1: Project Proposal and Initial Git Repository
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+DESCRIPTION:Course day: Day06\\nDetails: /cmse802-FS26/Schedule/06-next-sun
+ -project-proposal-milestone
+URL:/cmse802-FS26/Schedule/06-next-sun-project-proposal-milestone
 END:VEVENT
 BEGIN:VEVENT
 UID:1e5a006c00b245b2e41fa43ce354a98645d3f5f6@course-website-template
