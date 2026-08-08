@@ -2,13 +2,6 @@
 layout: schedule
 date: '2026-09-13'
 ---
-
-
-
-
-
-
-
 # Milestone 1: Project Proposal and Initial Git Repository
 
 ## Due Date

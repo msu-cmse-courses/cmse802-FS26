@@ -2,12 +2,6 @@
 layout: schedule
 date: '2026-09-10'
 ---
-
-
-
-
-
-
 # Modeling Intro - Day 2
 
 Notebook target: 02_triangle_function.ipynb

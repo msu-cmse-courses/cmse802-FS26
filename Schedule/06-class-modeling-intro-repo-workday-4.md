@@ -2,14 +2,7 @@
 layout: schedule
 date: '2026-09-17'
 ---
-
-
-
-
-
-
-# Modeling Intro Flex Day: Catch-Up or Project Discussion
-
+# Modeling Intro - Day 3
 ## Agenda (80 minutes)
 
 1. 10 min - Team check-in and status decision
