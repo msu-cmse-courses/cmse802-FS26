@@ -74,6 +74,8 @@ Common commands:
 
 Use the `Schedule` folder for course content that should stay attached to the instructional pacing of the course.
 
+Schedule markdown files may include a `date:` field in the YAML frontmatter. The generator updates that field automatically to the resolved date for the current semester when it rebuilds the schedule, which keeps pages portable across terms without hard-coding a semester-specific date.
+
 Examples:
 
 - class meeting pages
