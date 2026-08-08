@@ -151,8 +151,10 @@ class ScheduleUpdater:
             if not lines:
                 continue
 
+            target_date_text = target_date.strftime("%Y-%m-%d")
+
             if lines[0].strip() != "---":
-                text = "---\nlayout: schedule\ndate: " + target_date.strftime("%Y-%m-%d") + "\n---\n\n" + text
+                text = "---\nlayout: schedule\ndate: " + target_date_text + "\n---\n\n" + text
                 file_path.write_text(text, encoding="utf-8")
                 continue
 
@@ -172,7 +174,11 @@ class ScheduleUpdater:
             if not isinstance(frontmatter_data, dict):
                 frontmatter_data = {}
 
-            frontmatter_data["date"] = target_date.strftime("%Y-%m-%d")
+            existing_date = frontmatter_data.get("date")
+            if existing_date is not None and str(existing_date).strip() == target_date_text:
+                continue
+
+            frontmatter_data["date"] = target_date_text
             new_frontmatter = yaml.safe_dump(frontmatter_data, sort_keys=False, allow_unicode=False).rstrip()
             body_text = "\n".join(body_lines)
             updated_text = "---\n" + new_frontmatter + "\n---\n"

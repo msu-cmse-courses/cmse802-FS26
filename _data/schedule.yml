@@ -28,6 +28,12 @@
   url: /Schedule/04-class-modeling-intro-repo-workday-2
   event_type: class
   day_id: Day04
+- date: '2026-09-13'
+  week_start: '2026-09-07'
+  title: 'Milestone 1: Project Proposal and Initial Git Repository'
+  url: /Schedule/04-next-sun-project-proposal-milestone
+  event_type: next
+  day_id: Day04
 - date: '2026-09-15'
   week_start: '2026-09-14'
   title: Modeling Intro - Day 3
@@ -39,12 +45,6 @@
   title: 'Modeling Intro Flex Day: Catch-Up or Project Discussion'
   url: /Schedule/06-class-modeling-intro-flex-day
   event_type: class
-  day_id: Day06
-- date: '2026-09-20'
-  week_start: '2026-09-14'
-  title: 'Milestone 1: Project Proposal and Initial Git Repository'
-  url: /Schedule/06-next-sun-project-proposal-milestone
-  event_type: next
   day_id: Day06
 - date: '2026-09-22'
   week_start: '2026-09-21'

@@ -51,6 +51,16 @@ DESCRIPTION:Course day: Day04\\nDetails: /cmse802-FS26/Schedule/04-class-mo
 URL:/cmse802-FS26/Schedule/04-class-modeling-intro-repo-workday-2
 END:VEVENT
 BEGIN:VEVENT
+UID:6f07c26650ec7850f8c372ae14bcac00b46b8cf4@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 1: Project Proposal and Initial Git Repository
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20260914
+DESCRIPTION:Course day: Day04\\nDetails: /cmse802-FS26/Schedule/04-next-sun
+ -project-proposal-milestone
+URL:/cmse802-FS26/Schedule/04-next-sun-project-proposal-milestone
+END:VEVENT
+BEGIN:VEVENT
 UID:52e588aaf232e6a920ef63f405a421135fd6bcb8@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Modeling Intro - Day 3
@@ -69,16 +79,6 @@ DTEND:20260917T134000
 DESCRIPTION:Course day: Day06\\nDetails: /cmse802-FS26/Schedule/06-class-mo
  deling-intro-flex-day
 URL:/cmse802-FS26/Schedule/06-class-modeling-intro-flex-day
-END:VEVENT
-BEGIN:VEVENT
-UID:f721253dd2de94f017ac8210810313034efa9edc@course-website-template
-DTSTAMP:20261210T000000Z
-SUMMARY:Milestone 1: Project Proposal and Initial Git Repository
-DTSTART;VALUE=DATE:20260920
-DTEND;VALUE=DATE:20260921
-DESCRIPTION:Course day: Day06\\nDetails: /cmse802-FS26/Schedule/06-next-sun
- -project-proposal-milestone
-URL:/cmse802-FS26/Schedule/06-next-sun-project-proposal-milestone
 END:VEVENT
 BEGIN:VEVENT
 UID:1e5a006c00b245b2e41fa43ce354a98645d3f5f6@course-website-template
