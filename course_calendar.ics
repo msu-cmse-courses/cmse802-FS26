@@ -71,14 +71,14 @@ DESCRIPTION:Course day: Day05\\nDetails: /cmse802-FS26/Schedule/05-class-mo
 URL:/cmse802-FS26/Schedule/05-class-modeling-intro-repo-workday-3
 END:VEVENT
 BEGIN:VEVENT
-UID:5b76b9a8c272ea9956d7162d36a29b0882ec7e2a@course-website-template
+UID:4fb28ff9dbbe9563f52d26c2f776728cdaa55179@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Modeling Intro Flex Day: Catch-Up or Project Discussion
+SUMMARY:Modeling Intro - Day 3
 DTSTART:20260917T123000
 DTEND:20260917T134000
 DESCRIPTION:Course day: Day06\\nDetails: /cmse802-FS26/Schedule/06-class-mo
- deling-intro-flex-day
-URL:/cmse802-FS26/Schedule/06-class-modeling-intro-flex-day
+ deling-intro-repo-workday-4
+URL:/cmse802-FS26/Schedule/06-class-modeling-intro-repo-workday-4
 END:VEVENT
 BEGIN:VEVENT
 UID:1e5a006c00b245b2e41fa43ce354a98645d3f5f6@course-website-template
