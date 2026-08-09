@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+target="${SCHEDULE_MAKE_TARGET:-schedule-fall}"
+
+echo "[pre-push] Verifying generated schedule files with: make $target"
+
+if ! make "$target" >/dev/null; then
+  echo "[pre-push] Schedule generation failed."
+  echo "Run 'make $target' manually, fix errors, then push again."
+  exit 1
+fi
+
+if ! git diff --quiet -- _data/schedule.yml _data/schedule_warnings.yml course_calendar.ics; then
+  echo "[pre-push] Generated schedule files changed after running make $target."
+  echo "Commit these files before pushing:"
+  git --no-pager diff --name-only -- _data/schedule.yml _data/schedule_warnings.yml course_calendar.ics
+  echo "Then run push again."
+  exit 1
+fi
+
+echo "[pre-push] Schedule files are up to date."

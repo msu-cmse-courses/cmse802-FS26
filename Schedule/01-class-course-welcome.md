@@ -23,7 +23,7 @@ By the end of this class, you should be able to:
 
 ## 1. Welcome
 
-CMSE 802 helps you build research software that matters to your work. The course will use short class pages, a repeatable workflow, and regular checkpoints so you always know what to do next.
+CMSE 802 helps you build better research software. You'll learn software engineering practices, explore computational tools and modeling approaches, and discover techniques you can adapt to your own research.
 
 ## 2. Syllabus
 
