@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # Course Project
 
 The course project is the central activity of CMSE 802.

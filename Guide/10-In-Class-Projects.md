@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # In-Class Software Projects
 
 Throughout the semester, we will complete a series of guided in-class software projects.
