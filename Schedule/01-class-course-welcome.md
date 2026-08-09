@@ -67,6 +67,11 @@ Instead, you may choose the platform that best fits your situation:
 
 Use whichever platform helps you work clearly and consistently. The class will support either option.
 
+We will be using git a lot in this course.  Don't worry if you are not yet familar with git.  We will have plenty of time to p Here are some resources you can use to help you get started.  
+
+- [git game](https://ohmygit.org/)
+- [GitBrancing tutorial](https://learngitbranching.js.org/)
+
 ## Playground Repository Activity
 
 Your first hands-on task is to create a playground repository using the course template. This is a practice space, not your final project repository.
