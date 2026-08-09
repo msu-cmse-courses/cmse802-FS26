@@ -58,6 +58,12 @@
   url: null
   event_type: class
   day_id: Day08
+- date: '2026-09-27'
+  week_start: '2026-09-21'
+  title: 'Milestone 2: Initial Prototype and Working Workflow'
+  url: /Schedule/08-next-sun-initial-prototype-milestone
+  event_type: next
+  day_id: Day08
 - date: '2026-09-29'
   week_start: '2026-09-28'
   title: TBD
@@ -82,6 +88,12 @@
   url: null
   event_type: class
   day_id: Day12
+- date: '2026-10-11'
+  week_start: '2026-10-05'
+  title: 'Milestone 3: Testing and Validation Baseline'
+  url: /Schedule/12-next-sun-testing-validation-milestone
+  event_type: next
+  day_id: Day12
 - date: '2026-10-13'
   week_start: '2026-10-12'
   title: TBD
@@ -105,6 +117,12 @@
   title: TBD
   url: null
   event_type: class
+  day_id: Day16
+- date: '2026-10-25'
+  week_start: '2026-10-19'
+  title: 'Milestone 4: Documentation and Reproducibility Pass'
+  url: /Schedule/16-next-sun-documentation-reproducibility-milestone
+  event_type: next
   day_id: Day16
 - date: '2026-10-26'
   week_start: '2026-10-26'
@@ -136,6 +154,12 @@
   url: null
   event_type: class
   day_id: Day19
+- date: '2026-11-08'
+  week_start: '2026-11-02'
+  title: 'Milestone 5: Release Candidate and Handoff Package'
+  url: /Schedule/18-next-sun-release-candidate-milestone
+  event_type: next
+  day_id: Day18
 - date: '2026-11-10'
   week_start: '2026-11-09'
   title: TBD
@@ -160,6 +184,12 @@
   url: null
   event_type: class
   day_id: Day23
+- date: '2026-11-22'
+  week_start: '2026-11-16'
+  title: 'Milestone 6: Final Project Submission and Presentation Materials'
+  url: /Schedule/22-next-sun-final-project-submission-milestone
+  event_type: next
+  day_id: Day22
 - date: '2026-11-24'
   week_start: '2026-11-23'
   title: TBD
