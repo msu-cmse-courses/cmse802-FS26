@@ -2,7 +2,9 @@
 
 The course project is the central activity of CMSE 802.
 
-Throughout the semester, you will apply the ideas, tools, and software engineering practices discussed in class to a project that is relevant to your own interests, research area, or professional goals. The project is intended to be flexible enough to support a wide range of topics while still providing a shared structure for learning and evaluation.
+Throughout the semester, you will apply the ideas, tools, and software engineering practices discussed in class to a project that is relevant to your own interests, research area, or professional goals. The project is intended to be flexible enough to support a wide range of topics while still providing a shared structure for learning and evaluation. Here are the project Milestones:
+
+{% include mini-schedule.html keyword="milestone" title="Milestone Timeline" %}
 
 The goal is not simply to produce software that works. The goal is to produce software that another person can understand, use, evaluate, and extend.
 

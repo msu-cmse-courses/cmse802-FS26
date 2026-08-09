@@ -14,14 +14,14 @@ DESCRIPTION:Course day: Day01\\nDetails: /cmse802-FS26/Schedule/01-class-co
 URL:/cmse802-FS26/Schedule/01-class-course-welcome
 END:VEVENT
 BEGIN:VEVENT
-UID:5cef09463dd64d9907430a52c1907b19f3fa25e8@course-website-template
+UID:b01019512286f4407a85bf57110fefe83c62aafe@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Project Context and First Contact
+SUMMARY:Project Planning
 DTSTART:20260903T123000
 DTEND:20260903T134000
 DESCRIPTION:Course day: Day02\\nDetails: /cmse802-FS26/Schedule/02-class-pr
- oject-first-contact
-URL:/cmse802-FS26/Schedule/02-class-project-first-contact
+ oject-planning
+URL:/cmse802-FS26/Schedule/02-class-project-planning
 END:VEVENT
 BEGIN:VEVENT
 UID:fb8c25a3ed9595a05d6f5a509d23c2270e705452@course-website-template
