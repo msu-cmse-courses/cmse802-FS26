@@ -97,6 +97,16 @@ DTEND:20260924T134000
 DESCRIPTION:Course day: Day08
 END:VEVENT
 BEGIN:VEVENT
+UID:14ecd4fd54a7540f0c9f1cb65469c1d931884d05@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 2: Initial Prototype and Working Workflow
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+DESCRIPTION:Course day: Day08\\nDetails: /cmse802-FS26/Schedule/08-next-sun
+ -initial-prototype-milestone
+URL:/cmse802-FS26/Schedule/08-next-sun-initial-prototype-milestone
+END:VEVENT
+BEGIN:VEVENT
 UID:299c508ce8b81d300188870f5c962f5240f857ac@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:TBD
@@ -129,6 +139,16 @@ DTEND:20261008T134000
 DESCRIPTION:Course day: Day12
 END:VEVENT
 BEGIN:VEVENT
+UID:e0a05b755620e8810a31f2fb714ed793b4386e01@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 3: Testing and Validation Baseline
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+DESCRIPTION:Course day: Day12\\nDetails: /cmse802-FS26/Schedule/12-next-sun
+ -testing-validation-milestone
+URL:/cmse802-FS26/Schedule/12-next-sun-testing-validation-milestone
+END:VEVENT
+BEGIN:VEVENT
 UID:e6200be91d5af0a375b3c9be1265bf44b4bb9c23@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:TBD
@@ -159,6 +179,17 @@ SUMMARY:TBD
 DTSTART:20261022T123000
 DTEND:20261022T134000
 DESCRIPTION:Course day: Day16
+END:VEVENT
+BEGIN:VEVENT
+UID:3420c4e935e37e575c39a5163537f351bddb9215@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 4: Documentation and Reproducibility Pass
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+DESCRIPTION:Course day: Day16\\nDetails: /cmse802-FS26/Schedule/16-next-sun
+ -documentation-reproducibility-milestone
+URL:/cmse802-FS26/Schedule/16-next-sun-documentation-reproducibility-milest
+ one
 END:VEVENT
 BEGIN:VEVENT
 UID:bb7a67a3d4e807bee59fff36b842916f2e7c9148@course-website-template
@@ -199,6 +230,16 @@ DTEND:20261105T134000
 DESCRIPTION:Course day: Day19
 END:VEVENT
 BEGIN:VEVENT
+UID:8706e2e80821aace1e32fba993eed1e911ff88ff@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 5: Release Candidate and Handoff Package
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+DESCRIPTION:Course day: Day18\\nDetails: /cmse802-FS26/Schedule/18-next-sun
+ -release-candidate-milestone
+URL:/cmse802-FS26/Schedule/18-next-sun-release-candidate-milestone
+END:VEVENT
+BEGIN:VEVENT
 UID:93ef59e8b9e5fd241c7916feaea4dcb9e76ac68b@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:TBD
@@ -229,6 +270,16 @@ SUMMARY:TBD
 DTSTART:20261119T123000
 DTEND:20261119T134000
 DESCRIPTION:Course day: Day23
+END:VEVENT
+BEGIN:VEVENT
+UID:3cf3a47c9632ebb62f0ecbb12ee053037b6b1ff4@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 6: Final Project Submission and Presentation Materials
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+DESCRIPTION:Course day: Day22\\nDetails: /cmse802-FS26/Schedule/22-next-sun
+ -final-project-submission-milestone
+URL:/cmse802-FS26/Schedule/22-next-sun-final-project-submission-milestone
 END:VEVENT
 BEGIN:VEVENT
 UID:9daa6ab07658815678a2b4f3588868b1c21b587c@course-website-template
