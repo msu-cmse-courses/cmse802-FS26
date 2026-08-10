@@ -8,9 +8,8 @@ layout: guide
 
 ## 1. Date, Time and Location
 
-- **Meeting Days:** Tuesday and Thursday
-- **Meeting Time:** 8:30-9:50 AM 
-- **Location:** 1230 Engineering Bldg. 
+Please see the course [D2L page](https://d2l.msu.edu/d2l/home/2523930) or [MSU course catalog](https://student.msu.edu/) for class meeting times and locations.
+
 
 ## 2. Instructional team & resources
 

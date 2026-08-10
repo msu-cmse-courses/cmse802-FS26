@@ -2,7 +2,7 @@
 layout: schedule
 date: '2026-09-17'
 ---
-# Modeling Intro - Day 3
+# Modeling Intro - Day 4
 ## Agenda (80 minutes)
 
 1. 10 min - Team check-in and status decision
