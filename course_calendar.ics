@@ -71,9 +71,9 @@ DESCRIPTION:Course day: Day05\\nDetails: /cmse802-FS26/Schedule/05-class-mo
 URL:/cmse802-FS26/Schedule/05-class-modeling-intro-repo-workday-3
 END:VEVENT
 BEGIN:VEVENT
-UID:4fb28ff9dbbe9563f52d26c2f776728cdaa55179@course-website-template
+UID:e0b52179122ff69b0fc952848672f51061871a61@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Modeling Intro - Day 3
+SUMMARY:Modeling Intro - Day 4
 DTSTART:20260917T123000
 DTEND:20260917T134000
 DESCRIPTION:Course day: Day06\\nDetails: /cmse802-FS26/Schedule/06-class-mo
