@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-check-links:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -24,10 +25,14 @@ jobs:
 
       - name: Serve the built site locally
         run: |
-          python3 -m http.server 4000 --directory _site >/tmp/cmse802-site.log 2>&1 &
-          curl -I http://127.0.0.1:4000/
+          python3 -m http.server 4000 --directory _site --bind 127.0.0.1 >/tmp/cmse802-site.log 2>&1 &
+          curl --retry 12 --retry-delay 2 --retry-connrefused --fail --silent --show-error http://127.0.0.1:4000/ >/dev/null
 
       - name: Check site links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --base-url 'http://127.0.0.1:4000/' http://127.0.0.1:4000/
+          args: >
+            --verbose
+            --no-progress
+            --base-url 'http://127.0.0.1:4000/'
+            http://127.0.0.1:4000/
