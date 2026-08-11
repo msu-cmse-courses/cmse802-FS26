@@ -23,10 +23,17 @@ jobs:
       - name: Build the Jekyll site
         run: bundle exec jekyll build --source . --trace
 
+      - name: Prepare local site root for base URL
+        run: |
+          rm -rf /tmp/cmse802-site-root
+          mkdir -p /tmp/cmse802-site-root/cmse802-FS26
+          cp -R _site/. /tmp/cmse802-site-root/cmse802-FS26/
+
       - name: Serve the built site locally
         run: |
-          python3 -m http.server 4000 --directory _site --bind 127.0.0.1 >/tmp/cmse802-site.log 2>&1 &
-          curl --retry 12 --retry-delay 2 --retry-connrefused --fail --silent --show-error http://127.0.0.1:4000/ >/dev/null
+          cd /tmp/cmse802-site-root
+          python3 -m http.server 4000 --bind 127.0.0.1 >/tmp/cmse802-site.log 2>&1 &
+          curl --retry 12 --retry-delay 2 --retry-connrefused --fail --silent --show-error http://127.0.0.1:4000/cmse802-FS26/ >/dev/null
 
       - name: Check site links
         uses: lycheeverse/lychee-action@v2
@@ -34,5 +41,5 @@ jobs:
           args: >
             --verbose
             --no-progress
-            --base-url 'http://127.0.0.1:4000/'
-            http://127.0.0.1:4000/
+            --base-url 'http://127.0.0.1:4000/cmse802-FS26/'
+            http://127.0.0.1:4000/cmse802-FS26/
