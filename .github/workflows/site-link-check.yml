@@ -19,12 +19,15 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
-      - name: Build and serve the Jekyll site locally
+      - name: Build the Jekyll site
+        run: bundle exec jekyll build --source . --trace
+
+      - name: Serve the built site locally
         run: |
-          bundle exec jekyll build --source . --trace
-          bundle exec jekyll serve --detach --source . --host 127.0.0.1 --port 4000
+          python3 -m http.server 4000 --directory _site >/tmp/cmse802-site.log 2>&1 &
+          curl -I http://127.0.0.1:4000/
 
       - name: Check site links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --base 'http://127.0.0.1:4000/' 'http://127.0.0.1:4000/'
+          args: --verbose --no-progress --base-url 'http://127.0.0.1:4000/' http://127.0.0.1:4000/
