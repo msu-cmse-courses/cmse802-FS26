@@ -25,4 +25,4 @@ jobs:
       - name: Check generated site for broken links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --offline _site
+          args: --verbose --no-progress --offline --base 'https://colbrydi.github.io/cmse802-FS26/' _site
