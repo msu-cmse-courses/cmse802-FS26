@@ -61,7 +61,7 @@ The instructor should be able to review the repository quickly by reading the RE
 
 ## Submission and Review Workflow
 
-Each milestone is submitted by updating the student’s Git repository and making the current milestone work visible there. Students should commit the relevant changes and keep the repository in a reviewable state. For the first milestone, students should also submit the URL to their repository through the course online form. The link should open the repository’s main landing page on GitHub or GitLab so the instructor can access the project directly.
+Each milestone is submitted by updating the student’s Git repository and making the current milestone work visible there. Students should commit the relevant changes and keep the repository in a reviewable state. For the first milestone, students should also submit the URL to their repository through the course online form: [CMSE Project Registration – Fill out form](https://forms.cloud.microsoft/r/KR51WhT02B). The link should open the repository’s main landing page on GitHub or GitLab so the instructor can access the project directly.
 
 For milestones after the first one, no separate file or email submission is needed. The instructor will pull the latest state of the repository after the due date and grade whatever is present at that time. There are no extensions.
 
