@@ -12,8 +12,7 @@
 {% elsif include.part == "calendar" %}
 <div class="calendar-draft-wrap">
   <h1>{{ include.calendar_title | default: "Course Calendar" }}</h1>
-  <p>{{ include.calendar_description | default: "This is a preview page built from the schedule source file." }} Events are shown at {{ include.class_time | default: "TBD" }} in {{ include.class_location | default: "TBD" }}.</p>
-
+  
   {% assign subscription_path = include.subscription_path | default: "/course_calendar.ics" %}
   <p>
     Calendar subscription URL:

@@ -22,5 +22,5 @@ This site is organized around the semester schedule. Use the class calendar and 
 
 For course policies, workflow expectations, and reference material, start with the [Course Guide](./Guide/00-index).
 
-{% include schedule_widgets.html part="calendar" calendar_title="Course Calendar Draft" class_time="12:30 PM - 1:40 PM" class_location="EGR 1145" subscription_path="/course_calendar.ics" %}
-{% include schedule_widgets.html part="assets" class_time="12:30 PM - 1:40 PM" class_location="EGR 1145" %}
+{% include schedule_widgets.html part="calendar" calendar_title="Course Calendar" subscription_path="/course_calendar.ics" %}
+{% include schedule_widgets.html part="assets" %}
