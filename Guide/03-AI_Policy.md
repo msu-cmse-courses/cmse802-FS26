@@ -49,7 +49,7 @@ In software engineering this is sometimes called "slop"—extra code that adds c
 
 Throughout this course, remember the principle:
 
-    Keep It Simple, Silly (KISS)
+> Keep It Simple, Silly (KISS)
 
 Simple code is often:
 
@@ -110,7 +110,7 @@ Many of the repositories used in this course include an experimental AI support 
 
 The primary template can be found here:
 
-https://github.com/colbrydi/Research_Software_Project_Template
+<https://github.com/colbrydi/Research_Software_Project_Template>
 
 The template includes guidance files that provide context to both humans and AI systems.
 
