@@ -19,10 +19,12 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
-      - name: Build the Jekyll site
-        run: bundle exec jekyll build --source . --trace
+      - name: Build and serve the Jekyll site locally
+        run: |
+          bundle exec jekyll build --source . --trace
+          bundle exec jekyll serve --detach --source . --host 127.0.0.1 --port 4000
 
-      - name: Check generated site for broken links
+      - name: Check site links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --offline --base 'https://colbrydi.github.io/cmse802-FS26/' _site
+          args: --verbose --no-progress --base 'http://127.0.0.1:4000/' 'http://127.0.0.1:4000/'
