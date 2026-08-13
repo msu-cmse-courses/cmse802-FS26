@@ -10,6 +10,6 @@ This project is expected to span approximately four class periods (about two wee
 
 Most daily work for this assignment will happen in the project repository:
 
-- Repository: [Analytical Modeling Project Repository](https://github.com/USERNAME/analytical-modeling)
+- Repository: [Analytical Modeling Project Repository](https://github.com/colbrydi/analytical-modeling)
 
 Use the repository materials to guide implementation details, tests, and deliverables.

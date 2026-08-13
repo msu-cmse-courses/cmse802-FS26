@@ -10,6 +10,6 @@ This project is expected to span approximately four class periods (about two wee
 
 Most daily work for this assignment will happen in the project repository:
 
-- Repository: [Data-Driven Modeling Project Repository](https://github.com/USERNAME/data-driven-modeling)
+- Repository: [Data-Driven Modeling Project Repository](https://github.com/colbrydi/data-driven-modeling)
 
 Use the repository workflow and documentation for the detailed class-by-class tasks.
