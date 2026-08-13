@@ -10,6 +10,6 @@ This project is expected to span approximately four class periods (about two wee
 
 Most daily work for this assignment will happen in the project repository:
 
-- Repository: [Physical Modeling Project Repository](https://github.com/USERNAME/physical-modeling)
+- Repository: [Physical Modeling Project Repository](https://github.com/colbrydi/physical-modeling)
 
 Use the repository instructions as the primary source for tasks, evidence, and milestones.
