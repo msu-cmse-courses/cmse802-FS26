@@ -81,20 +81,24 @@ DESCRIPTION:Course day: Day06\\nDetails: /cmse802-FS26/Schedule/06-class-mo
 URL:/cmse802-FS26/Schedule/06-class-modeling-intro-repo-workday-4
 END:VEVENT
 BEGIN:VEVENT
-UID:1e5a006c00b245b2e41fa43ce354a98645d3f5f6@course-website-template
+UID:61ecd40477a8f4c685ecbebc58ea98332a7e9d10@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Analytical Modeling - Day 1
 DTSTART:20260922T123000
 DTEND:20260922T134000
-DESCRIPTION:Course day: Day07
+DESCRIPTION:Course day: Day07\\nDetails: /cmse802-FS26/Schedule/07-class-an
+ alytical-modeling-day-1
+URL:/cmse802-FS26/Schedule/07-class-analytical-modeling-day-1
 END:VEVENT
 BEGIN:VEVENT
-UID:60a4615ac73099c488b5a3ec098d651ef2151007@course-website-template
+UID:0782c483e1739ac65678b2be30a727f3461d16e8@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Analytical Modeling - Day 2
 DTSTART:20260924T123000
 DTEND:20260924T134000
-DESCRIPTION:Course day: Day08
+DESCRIPTION:Course day: Day08\\nDetails: /cmse802-FS26/Schedule/08-class-an
+ alytical-modeling-day-2
+URL:/cmse802-FS26/Schedule/08-class-analytical-modeling-day-2
 END:VEVENT
 BEGIN:VEVENT
 UID:14ecd4fd54a7540f0c9f1cb65469c1d931884d05@course-website-template
@@ -107,20 +111,24 @@ DESCRIPTION:Course day: Day08\\nDetails: /cmse802-FS26/Schedule/08-next-sun
 URL:/cmse802-FS26/Schedule/08-next-sun-initial-prototype-milestone
 END:VEVENT
 BEGIN:VEVENT
-UID:299c508ce8b81d300188870f5c962f5240f857ac@course-website-template
+UID:31276be11045b654bbf7b7ffae38ff52ee7115ed@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Analytical Modeling - Day 3
 DTSTART:20260929T123000
 DTEND:20260929T134000
-DESCRIPTION:Course day: Day09
+DESCRIPTION:Course day: Day09\\nDetails: /cmse802-FS26/Schedule/09-class-an
+ alytical-modeling-day-3
+URL:/cmse802-FS26/Schedule/09-class-analytical-modeling-day-3
 END:VEVENT
 BEGIN:VEVENT
-UID:1577fb922df708d8db5b93e6d125db7fa745f386@course-website-template
+UID:98fcc6072662d3e87fc970498b76124be1ccdc21@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Analytical Modeling - Day 4
 DTSTART:20261001T123000
 DTEND:20261001T134000
-DESCRIPTION:Course day: Day10
+DESCRIPTION:Course day: Day10\\nDetails: /cmse802-FS26/Schedule/10-class-an
+ alytical-modeling-day-4
+URL:/cmse802-FS26/Schedule/10-class-analytical-modeling-day-4
 END:VEVENT
 BEGIN:VEVENT
 UID:7a75506c2ac043fd375bf9ed03a2152994c25a5b@course-website-template
