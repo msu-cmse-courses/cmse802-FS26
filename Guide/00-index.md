@@ -37,10 +37,10 @@ Most students should start with the Syllabus, Weekly Routine, and Course Milesto
 
 Most of the semester will center on four major in-class assignments. Each assignment is designed for approximately four class periods (about two weeks) and is organized around a dedicated repository.
 
-1. [Modeling Intro Project](./02-Modeling-Intro-Project)
-2. [Analytical Modeling Project](./03-Analytical-Modeling-Project)
-3. [Physical Modeling Project](./04-Physical-Modeling-Project)
-4. [Data-Driven Modeling Project](./05-Data-Driven-Modeling-Project)
+1. [Modeling Intro Project](./11-Modeling-Intro-Project)
+2. [Analytical Modeling Project](./12-Analytical-Modeling-Project)
+3. [Physical Modeling Project](./13-Physical-Modeling-Project)
+4. [Data-Driven Modeling Project](./14-Data-Driven-Modeling-Project)
 
 Each project page gives a short overview and links to the repository where day-to-day work will happen.
 
