@@ -40,3 +40,7 @@ If notebook work is not complete, continue in notebook order and move to the nex
 - Ensure modeling_intro updates are pushed and documented.
 - Confirm team priorities for the next assignment block.
 - Capture one action item for your individual project.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

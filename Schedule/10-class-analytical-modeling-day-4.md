@@ -44,3 +44,8 @@ As you work, consider:
 - Finish any notebook work from today and save your observations.
 - Write down one example of how parameter estimation could matter in your own project or research domain.
 - Be ready to discuss how the analytical modeling unit connects to later modeling blocks in the course.
+
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

@@ -42,3 +42,7 @@ The key question is not just whether the code runs, but whether the generated da
 - Review the synthetic-data workflow and note one place where noise changes your interpretation.
 - Revisit the repository README and connect this part to the larger analytical-modeling unit.
 - Prepare one question about parameter estimation or model trust for the next class.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

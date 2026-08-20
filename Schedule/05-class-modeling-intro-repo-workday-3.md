@@ -40,3 +40,7 @@ If your team finishes early, use extra time to help teammates, improve the share
 - Push your latest 03_Improving_Software.ipynb updates.
 - List any remaining modeling_intro tasks that may need the buffer day.
 - Be ready for a catch-up day or a project and deliverables discussion.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

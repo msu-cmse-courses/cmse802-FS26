@@ -43,3 +43,7 @@ The emphasis is on reasoning, not just producing code output. As you work, ask:
 - Finish the notebook work from today if needed.
 - Capture one example from the repository that connects to your own research project.
 - Bring one question about the analytical model or its assumptions to the next class.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

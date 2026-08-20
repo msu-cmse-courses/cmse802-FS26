@@ -49,3 +49,7 @@ We will talk through which components are most prominent in each project and how
 - Write down your current best project idea or research software direction.
 - Note your current Analytical/Physical/Data-Driven component mix and where you expect it to evolve.
 - Bring one question about tools, workflow, or project scope to the next class.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

@@ -40,3 +40,7 @@ If your team finishes early, use extra time to help teammates, improve the share
 - Push your latest 02_triangle_function.ipynb updates.
 - Note any remaining 02_triangle_function.ipynb issues that need a short follow-up.
 - Preview 03_Improving_Software.ipynb before the next class.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

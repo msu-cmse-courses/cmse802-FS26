@@ -40,3 +40,7 @@ If your team finishes early, use extra time to help teammates, improve the share
 - Push your latest 01_Model_Triangle.ipynb updates.
 - Write a short note about any unresolved 01_Model_Triangle.ipynb questions.
 - Preview 02_triangle_function.ipynb before the next class.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

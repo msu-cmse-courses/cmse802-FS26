@@ -47,3 +47,7 @@ As you work, keep track of:
 - Read the repository README and note one conceptual connection to your project.
 - Complete the first notebook section if you have not already.
 - Write down one question you want to revisit in the next analytical-modeling class.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)

@@ -90,3 +90,7 @@ Suggested first steps:
 - Confirm which platform you want to use for the playground repository.
 - Make one small change in the playground repo and save it.
 - Be ready to share one research problem this course might help you advance.
+
+## Daily Check-in and Reflection
+
+[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)
