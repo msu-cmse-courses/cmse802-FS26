@@ -45,7 +45,7 @@ layout: default
 				{% endif %}
 				<div class='sched-item'>
 					<div class='sched-date-line'><time datetime='{{ item.date }}'>{{ item.date | date: "%a %m/%d" }}</time></div>
-					<div class='sched-title-line'>{% if item.url and item.url != "" %}<a href="{{ item.url | relative_url }}" {% if item_is_active %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</div>
+					<div class='sched-title-line'>{% if item.url and item.url != "" %}<a href="{{ item.url | relative_url }}#content" {% if item_is_active %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</div>
 				</div>
 			{% endfor %}
 		{% elsif schedule_pages and schedule_pages.size > 0 %}
@@ -59,7 +59,7 @@ layout: default
 						{% assign item_is_active = true %}
 					{% endif %}
 					<li>
-						<a href="{{ item.url | relative_url }}" {% if item_is_active %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+						<a href="{{ item.url | relative_url }}#content" {% if item_is_active %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
 					</li>
 				{% endfor %}
 			</ul>
@@ -73,7 +73,7 @@ layout: default
 			<nav class="page-nav" aria-label="Schedule assignment navigation">
 				<div>
 					{% if prev_item %}
-						<a href="{{ prev_item.url | relative_url }}">← {{ prev_item.date | date: "%a %m/%d" }}</a>
+						<a href="{{ prev_item.url | relative_url }}#content">← {{ prev_item.date | date: "%a %m/%d" }}</a>
 					{% endif %}
 				</div>
 
@@ -83,7 +83,7 @@ layout: default
 
 				<div>
 					{% if next_item %}
-						<a href="{{ next_item.url | relative_url }}">{{ next_item.date | date: "%a %m/%d" }} →</a>
+						<a href="{{ next_item.url | relative_url }}#content">{{ next_item.date | date: "%a %m/%d" }} →</a>
 					{% endif %}
 				</div>
 			</nav>
