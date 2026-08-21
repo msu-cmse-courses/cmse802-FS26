@@ -55,7 +55,7 @@
 - date: '2026-09-24'
   week_start: '2026-09-21'
   title: Analytical Modeling - Day 2
-  url: /Schedule/08-class-analytical-modeling-day-2
+  url: null
   event_type: class
   day_id: Day08
 - date: '2026-09-27'
@@ -67,13 +67,13 @@
 - date: '2026-09-29'
   week_start: '2026-09-28'
   title: Analytical Modeling - Day 3
-  url: /Schedule/09-class-analytical-modeling-day-3
+  url: null
   event_type: class
   day_id: Day09
 - date: '2026-10-01'
   week_start: '2026-09-28'
   title: Analytical Modeling - Day 4
-  url: /Schedule/10-class-analytical-modeling-day-4
+  url: null
   event_type: class
   day_id: Day10
 - date: '2026-10-06'

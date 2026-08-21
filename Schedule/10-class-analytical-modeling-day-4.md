@@ -1,6 +1,7 @@
 ---
 layout: schedule
 date: '2026-10-01'
+publish: false
 ---
 # Analytical Modeling - Day 4
 
