@@ -1,6 +1,7 @@
 ---
 layout: schedule
 date: '2026-09-22'
+publish: false
 ---
 # Analytical Modeling - Day 1
 

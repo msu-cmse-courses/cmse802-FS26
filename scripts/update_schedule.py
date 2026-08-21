@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Generate schedule data from calendar + Schedule filenames.
+"""Build website schedule metadata from the course calendar and source markdown files.
+
+This module acts as the bridge between the course calendar and the markdown pages in
+`Schedule/`. It reads the semester calendar, infers the scheduled dates from the
+filename convention used by class pages, and emits the YAML data later consumed by the
+site templates.
 
 Single source of truth:
 - config/[semester]_calendar.yml (dates and semester adjustments)
@@ -23,6 +28,8 @@ VALID_WEEKDAYS = {"mon", "tue", "wed", "thu", "fri", "sat", "sun"}
 
 @dataclass(frozen=True)
 class ParsedScheduleFilename:
+    """A schedule markdown file translated into its date relationship metadata."""
+
     file_path: Path
     anchor_day: int
     relation: str
@@ -32,8 +39,54 @@ class ParsedScheduleFilename:
 
 @dataclass(frozen=True)
 class ScheduleFilenameWarning:
+    """A filename pattern issue that should be surfaced in generated warnings output."""
+
     file_path: Path
     message: str
+
+
+def _front_matter_data(file_path: Path) -> dict:
+    """Return YAML front matter for a markdown file as a dictionary, if present."""
+
+    text = file_path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+
+    if not lines or lines[0].strip() != "---":
+        return {}
+
+    frontmatter_lines: list[str] = []
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        frontmatter_lines.append(line)
+
+    if not frontmatter_lines:
+        return {}
+
+    frontmatter_text = "\n".join(frontmatter_lines)
+    parsed = yaml.safe_load(frontmatter_text) or {}
+    return parsed if isinstance(parsed, dict) else {}
+
+
+def _should_publish_schedule_item(file_path: Path) -> bool:
+    """Whether a schedule item should remain clickable in generated schedule data.
+
+    Files that set `publish: false` are still kept in the repository but are treated as
+    hidden schedule entries. They can still appear in the generated calendar title list
+    without a URL when that is useful for staging future assignments.
+    """
+
+    frontmatter = _front_matter_data(file_path)
+    publish_value = frontmatter.get("publish", frontmatter.get("published"))
+
+    if publish_value is None:
+        return True
+    if isinstance(publish_value, bool):
+        return publish_value
+    if isinstance(publish_value, str):
+        normalized = publish_value.strip().lower()
+        return normalized not in {"false", "no", "0", "off"}
+    return bool(publish_value)
 
 
 def parse_schedule_filename(file_path: Path) -> tuple[ParsedScheduleFilename | None, ScheduleFilenameWarning | None]:
@@ -86,6 +139,8 @@ def parse_schedule_filename(file_path: Path) -> tuple[ParsedScheduleFilename | N
 
 
 def parse_schedule_directory(schedule_dir: Path) -> tuple[list[ParsedScheduleFilename], list[ScheduleFilenameWarning]]:
+    """List valid schedule files and any filename-level warnings in a directory."""
+
     parsed: list[ParsedScheduleFilename] = []
     warnings: list[ScheduleFilenameWarning] = []
 
@@ -122,11 +177,17 @@ def markdown_title_for_file(file_path: Path) -> str:
 
 
 class ScheduleUpdater:
+    """Populate schedule metadata from the calendar and markdown schedule definitions."""
+
     def __init__(self, calendar_path: str):
+        """Load the semester calendar used to anchor class-date calculations."""
+
         with open(calendar_path, "r", encoding="utf-8") as handle:
             self.calendar = yaml.safe_load(handle) or {}
 
     def _resolve_target_date(self, item: ParsedScheduleFilename, class_dates: list[datetime]) -> datetime:
+        """Translate a parsed filename relation into the actual target class date."""
+
         anchor_date = class_dates[item.anchor_day - 1]
         if item.relation == "same":
             return anchor_date
@@ -139,6 +200,8 @@ class ScheduleUpdater:
         raise ValueError(f"Unsupported schedule relation: {item.relation}")
 
     def update_schedule_page_dates(self, schedule_dir: Path) -> None:
+        """Ensure every schedule markdown file has a current front-matter date."""
+
         parsed_items, _ = parse_schedule_directory(schedule_dir)
         class_dates = self._meeting_dates()
 
@@ -187,17 +250,25 @@ class ScheduleUpdater:
             file_path.write_text(updated_text, encoding="utf-8")
 
     def _first_day(self) -> datetime:
+        """Return the first date in the semester calendar."""
+
         return datetime.strptime(self.calendar["semester_info"]["first_day"], "%Y-%m-%d")
 
     def _last_day(self) -> datetime:
+        """Return the final date in the semester calendar."""
+
         return datetime.strptime(self.calendar["semester_info"]["last_day"], "%Y-%m-%d")
 
     def _meeting_days(self) -> list[str]:
+        """Return the weekday names on which classes normally meet."""
+
         semester_days = self.calendar.get("semester_info", {}).get("meeting_days")
         class_days = self.calendar.get("class_days")
         return list(semester_days or class_days or ["Tuesday", "Thursday"])
 
     def _break_ranges(self) -> list[tuple[datetime, datetime]]:
+        """Collect the date ranges excluded from class meetings, such as breaks."""
+
         ranges: list[tuple[datetime, datetime]] = []
 
         for info in (self.calendar.get("breaks") or {}).values():
@@ -216,12 +287,16 @@ class ScheduleUpdater:
         return ranges
 
     def _is_break(self, day: datetime) -> bool:
+        """Return whether a given date falls inside a semester break or cancellation."""
+
         for start, end in self._break_ranges():
             if start <= day <= end:
                 return True
         return False
 
     def _meeting_dates(self) -> list[datetime]:
+        """Generate the date list for every scheduled class meeting in the semester."""
+
         current = self._first_day()
         last_day = self._last_day()
         meeting_days = set(self._meeting_days())
@@ -236,10 +311,14 @@ class ScheduleUpdater:
 
     @staticmethod
     def _week_start_iso_for(day: datetime) -> str:
+        """Return the ISO date for the start of the week containing the supplied day."""
+
         return (day - timedelta(days=day.weekday())).strftime("%Y-%m-%d")
 
     @staticmethod
     def _next_weekday_after(day: datetime, weekday_token: str) -> datetime:
+        """Return the next occurrence of a named weekday after the supplied date."""
+
         weekday_map = {
             "mon": 0,
             "tue": 1,
@@ -256,6 +335,8 @@ class ScheduleUpdater:
         return day + timedelta(days=delta)
 
     def _calendar_non_class_events(self) -> list[dict[str, str | None]]:
+        """Return non-class semester events such as breaks or institutional calendar dates."""
+
         events: list[dict[str, str | None]] = []
 
         for break_name, info in (self.calendar.get("breaks") or {}).items():
@@ -295,6 +376,13 @@ class ScheduleUpdater:
         return events
 
     def build_schedule_events(self, schedule_dir: Path) -> tuple[list[dict[str, str | None]], list[str]]:
+        """Create the schedule metadata consumed by the website templates.
+
+        Each entry contains a title and an optional URL. Hidden items with `publish: false`
+        are kept in the source tree and can still appear in the schedule list, but their URL
+        is intentionally set to `None` so they do not appear clickable.
+        """
+
         parsed_items, parse_warnings = parse_schedule_directory(schedule_dir)
         warnings: list[str] = [f"{w.file_path.name}: {w.message}" for w in parse_warnings]
 
@@ -330,12 +418,14 @@ class ScheduleUpdater:
                 )
                 continue
 
+            title = markdown_title_for_file(class_item.file_path)
+            public_url = None if not _should_publish_schedule_item(class_item.file_path) else f"/Schedule/{class_item.file_path.stem}"
             events.append(
                 {
                     "date": class_date.strftime("%Y-%m-%d"),
                     "week_start": self._week_start_iso_for(class_date),
-                    "title": markdown_title_for_file(class_item.file_path),
-                    "url": f"/Schedule/{class_item.file_path.stem}",
+                    "title": title,
+                    "url": public_url,
                     "event_type": "class",
                     "day_id": f"Day{index:02d}",
                 }
@@ -365,12 +455,14 @@ class ScheduleUpdater:
                 warnings.append(f"{item.file_path.name}: unsupported relation {item.relation}")
                 continue
 
+            title = markdown_title_for_file(item.file_path)
+            public_url = None if not _should_publish_schedule_item(item.file_path) else f"/Schedule/{item.file_path.stem}"
             events.append(
                 {
                     "date": target_date.strftime("%Y-%m-%d"),
                     "week_start": self._week_start_iso_for(target_date),
-                    "title": markdown_title_for_file(item.file_path),
-                    "url": f"/Schedule/{item.file_path.stem}",
+                    "title": title,
+                    "url": public_url,
                     "event_type": item.relation,
                     "day_id": f"Day{item.anchor_day:02d}",
                 }
@@ -386,6 +478,8 @@ class ScheduleUpdater:
         schedule_data_path: str = "_data/schedule.yml",
         schedule_warnings_path: str = "_data/schedule_warnings.yml",
     ) -> None:
+        """Write the generated schedule YAML and warning summary for the website."""
+
         self.update_schedule_page_dates(Path(schedule_dir))
         events, warnings = self.build_schedule_events(Path(schedule_dir))
 
@@ -406,6 +500,8 @@ class ScheduleUpdater:
 
 
 def main() -> None:
+    """Command-line entry point for generating the schedule data files."""
+
     parser = argparse.ArgumentParser(description="Update generated schedule data from config")
     parser.add_argument("--calendar", required=True, help="Path to semester calendar YAML file")
     parser.add_argument(

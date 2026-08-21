@@ -81,14 +81,12 @@ DESCRIPTION:Course day: Day06\\nDetails: /cmse802-FS26/Schedule/06-class-mo
 URL:/cmse802-FS26/Schedule/06-class-modeling-intro-repo-workday-4
 END:VEVENT
 BEGIN:VEVENT
-UID:61ecd40477a8f4c685ecbebc58ea98332a7e9d10@course-website-template
+UID:cff0789975c1c85181f823ea09b579bd5e49989e@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Analytical Modeling - Day 1
 DTSTART:20260922T123000
 DTEND:20260922T134000
-DESCRIPTION:Course day: Day07\\nDetails: /cmse802-FS26/Schedule/07-class-an
- alytical-modeling-day-1
-URL:/cmse802-FS26/Schedule/07-class-analytical-modeling-day-1
+DESCRIPTION:Course day: Day07
 END:VEVENT
 BEGIN:VEVENT
 UID:0782c483e1739ac65678b2be30a727f3461d16e8@course-website-template
