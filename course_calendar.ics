@@ -312,9 +312,9 @@ DTEND:20261201T134000
 DESCRIPTION:Course day: Day25
 END:VEVENT
 BEGIN:VEVENT
-UID:dbfedf2371210b37ce84c768b0ff3fbe34b61d13@course-website-template
+UID:a03b0a30168be3e3be97bfe48f8f6ae4a9729d9b@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Final Presntations - Day 1
 DTSTART:20261203T123000
 DTEND:20261203T134000
 DESCRIPTION:Course day: Day26
@@ -330,9 +330,9 @@ DESCRIPTION:Course day: Day25\\nDetails: /cmse802-FS26/Schedule/25-next-sun
 URL:/cmse802-FS26/Schedule/25-next-sun-final-project-submission-milestone
 END:VEVENT
 BEGIN:VEVENT
-UID:6e2c8f669fd6cb866b10798b8e52471af8c3af6c@course-website-template
+UID:34e89d693967d9ae0c008c0d30b5c3338e9ecb97@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Final Presntations - Day 2
 DTSTART:20261208T123000
 DTEND:20261208T134000
 DESCRIPTION:Course day: Day27
