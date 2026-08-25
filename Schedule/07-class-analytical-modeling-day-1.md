@@ -51,4 +51,4 @@ As you work, keep track of:
 
 ## Daily Check-in and Reflection
 
-[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)
+[Daily Check-in Form](https://forms.cloud.microsoft/r/QkH6Mx8FUd)

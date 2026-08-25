@@ -47,4 +47,4 @@ The emphasis is on reasoning, not just producing code output. As you work, ask:
 
 ## Daily Check-in and Reflection
 
-[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)
+[Daily Check-in Form](https://forms.cloud.microsoft/r/QkH6Mx8FUd)

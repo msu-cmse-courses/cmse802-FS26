@@ -52,4 +52,4 @@ We will talk through which components are most prominent in each project and how
 
 ## Daily Check-in and Reflection
 
-[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)
+[Daily Check-in Form](https://forms.cloud.microsoft/r/QkH6Mx8FUd)

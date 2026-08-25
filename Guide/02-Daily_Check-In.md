@@ -6,7 +6,8 @@ layout: guide
 
 Regular participation is important for success in this course. We recognize that students balance many responsibilities, so the expectation is not perfect attendance but a good faith effort to attend, engage, and communicate. Students are asked to complete the daily check-in form before each class meeting. The purpose of the check-in is to help build trust, accountability, and professional communication. If you are unable to attend or expect to be late, use the form to let the instructor know why and, when appropriate, your plan for staying engaged with the course. Attendance, participation, and communication may be considered as part of your participation grade. The form is available at: 
 
-[Daily Check-in Form](https://msu.co1.qualtrics.com/jfe/form/SV_2gVyi5kt8zV4u6G)
+[Daily Check-in Form](https://forms.cloud.microsoft/r/QkH6Mx8FUd)
+
 
 
 ## Expectations
