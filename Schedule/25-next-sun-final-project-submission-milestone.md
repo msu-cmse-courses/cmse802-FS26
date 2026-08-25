@@ -1,7 +1,8 @@
 ---
 layout: schedule
-date: '2026-11-22'
+date: '2026-12-06'
 ---
+
 
 # Milestone 6: Final Project Submission and Presentation Materials
 

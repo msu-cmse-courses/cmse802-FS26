@@ -1,3 +1,7 @@
+- warning: '26-Final_Presentations_Day1.md: Filename does not match convention. Expected
+    one of: NN-class-*, NN-same-*, NN-plus-D-*, NN-next-WDAY-*'
+- warning: '27-Final_Presentations_Day2.md: Filename does not match convention. Expected
+    one of: NN-class-*, NN-same-*, NN-plus-D-*, NN-next-WDAY-*'
 - warning: 'Day19: missing NN-class-* file; inserted TBD entry'
 - warning: 'Day20: missing NN-class-* file; inserted TBD entry'
 - warning: 'Day21: missing NN-class-* file; inserted TBD entry'

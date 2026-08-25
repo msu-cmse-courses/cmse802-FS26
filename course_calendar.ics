@@ -230,14 +230,14 @@ DTEND:20261105T134000
 DESCRIPTION:Course day: Day19
 END:VEVENT
 BEGIN:VEVENT
-UID:8706e2e80821aace1e32fba993eed1e911ff88ff@course-website-template
+UID:e5ec8e57fffae8ef7dc0c7612a4df46441862b96@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Milestone 5: Release Candidate and Handoff Package
+SUMMARY:Milestone 5: Project Systems and Automation
 DTSTART;VALUE=DATE:20261108
 DTEND;VALUE=DATE:20261109
 DESCRIPTION:Course day: Day18\\nDetails: /cmse802-FS26/Schedule/18-next-sun
- -release-candidate-milestone
-URL:/cmse802-FS26/Schedule/18-next-sun-release-candidate-milestone
+ -project-systems-milestone
+URL:/cmse802-FS26/Schedule/18-next-sun-project-systems-milestone
 END:VEVENT
 BEGIN:VEVENT
 UID:93ef59e8b9e5fd241c7916feaea4dcb9e76ac68b@course-website-template
@@ -272,14 +272,14 @@ DTEND:20261119T134000
 DESCRIPTION:Course day: Day23
 END:VEVENT
 BEGIN:VEVENT
-UID:3cf3a47c9632ebb62f0ecbb12ee053037b6b1ff4@course-website-template
+UID:41c2049e31f410561d45eb0a382cf7b5a6bb9183@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Milestone 6: Final Project Submission and Presentation Materials
+SUMMARY:Milestone 5: Release Candidate and Handoff Package
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
 DESCRIPTION:Course day: Day22\\nDetails: /cmse802-FS26/Schedule/22-next-sun
- -final-project-submission-milestone
-URL:/cmse802-FS26/Schedule/22-next-sun-final-project-submission-milestone
+ -release-candidate-milestone
+URL:/cmse802-FS26/Schedule/22-next-sun-release-candidate-milestone
 END:VEVENT
 BEGIN:VEVENT
 UID:9daa6ab07658815678a2b4f3588868b1c21b587c@course-website-template
@@ -318,6 +318,16 @@ SUMMARY:TBD
 DTSTART:20261203T123000
 DTEND:20261203T134000
 DESCRIPTION:Course day: Day26
+END:VEVENT
+BEGIN:VEVENT
+UID:73394c7ff9e2b7dc1ad9bda4e10fe6c52de34a64@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 6: Final Project Submission and Presentation Materials
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+DESCRIPTION:Course day: Day25\\nDetails: /cmse802-FS26/Schedule/25-next-sun
+ -final-project-submission-milestone
+URL:/cmse802-FS26/Schedule/25-next-sun-final-project-submission-milestone
 END:VEVENT
 BEGIN:VEVENT
 UID:6e2c8f669fd6cb866b10798b8e52471af8c3af6c@course-website-template
