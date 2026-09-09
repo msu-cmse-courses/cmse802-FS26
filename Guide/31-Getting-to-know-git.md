@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # Getting to Know Git
 **by Dirk Colbry**
 
