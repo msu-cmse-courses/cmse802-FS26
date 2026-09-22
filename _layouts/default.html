@@ -623,7 +623,34 @@
       </button>
 
       <nav id="nav-links" class="nav-links" aria-label="Primary">
+        {% assign schedule_items = site.data.schedule | sort: "date" %}
+        {% assign today_iso = 'now' | date: '%Y-%m-%d' %}
+        {% assign today_target = nil %}
+        {% assign next_target = nil %}
+        {% assign today_url = nil %}
+
+        {% for item in schedule_items %}
+          {% assign item_iso = item.date | date: '%Y-%m-%d' %}
+          {% if item.url and item.url != "" %}
+            {% if item_iso == today_iso %}
+              {% assign today_target = item %}
+              {% break %}
+            {% elsif item_iso > today_iso and next_target == nil %}
+              {% assign next_target = item %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% if today_target %}
+          {% assign today_url = today_target.url | relative_url | append: '#content' %}
+        {% elsif next_target %}
+          {% assign today_url = next_target.url | relative_url | append: '#content' %}
+        {% endif %}
+
         <a href="{{ '/' | relative_url }}" {% if page.layout == "schedule" %}class="active" aria-current="page"{% endif %}>Schedule</a>
+        {% if today_url %}
+          <a href="{{ today_url }}">Today</a>
+        {% endif %}
 
         {% assign guide_root_candidates = site.pages | where: "layout", "guide" | sort: "path" %}
         {% for item in guide_root_candidates %}
