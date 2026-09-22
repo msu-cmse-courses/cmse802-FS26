@@ -609,29 +609,18 @@
     </div>
 
     <div class="nav-right">
-      <button class="view-toggle" type="button" aria-label="Toggle wide view" aria-pressed="false" title="Wide view" onclick="toggleWideView(this)">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3.5" y="4.5" width="4.5" height="15" rx="1"></rect>
-          <rect x="9.25" y="4.5" width="5.5" height="15" rx="1"></rect>
-          <rect x="16" y="4.5" width="4.5" height="15" rx="1"></rect>
-        </svg>
-      </button>
-      <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false" onclick="toggleMenu(this)" aria-label="Open navigation" title="Open navigation">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke-width="1.8" stroke-linecap="round">
-          <path d="M4 7h16M4 12h16M4 17h16"></path>
-        </svg>
-      </button>
-
       <nav id="nav-links" class="nav-links" aria-label="Primary">
         {% assign schedule_items = site.data.schedule | sort: "date" %}
         {% assign today_iso = 'now' | date: '%Y-%m-%d' %}
         {% assign today_target = nil %}
         {% assign next_target = nil %}
+        {% assign last_valid_target = nil %}
         {% assign today_url = nil %}
 
         {% for item in schedule_items %}
           {% assign item_iso = item.date | date: '%Y-%m-%d' %}
           {% if item.url and item.url != "" %}
+            {% assign last_valid_target = item %}
             {% if item_iso == today_iso %}
               {% assign today_target = item %}
               {% break %}
@@ -645,12 +634,14 @@
           {% assign today_url = today_target.url | relative_url | append: '#content' %}
         {% elsif next_target %}
           {% assign today_url = next_target.url | relative_url | append: '#content' %}
+        {% elsif last_valid_target %}
+          {% assign today_url = last_valid_target.url | relative_url | append: '#content' %}
         {% endif %}
 
-        <a href="{{ '/' | relative_url }}" {% if page.layout == "schedule" %}class="active" aria-current="page"{% endif %}>Schedule</a>
         {% if today_url %}
-          <a href="{{ today_url }}">Today</a>
+          <a href="{{ today_url }}" title="Jump to the current or next class session" aria-label="Current Class: jump to the current or next class session">Current Class</a>
         {% endif %}
+        <a href="{{ '/' | relative_url }}" {% if page.layout == "schedule" %}class="active" aria-current="page"{% endif %} title="Browse the full course schedule" aria-label="Browse the full course schedule">Schedule</a>
 
         {% assign guide_root_candidates = site.pages | where: "layout", "guide" | sort: "path" %}
         {% for item in guide_root_candidates %}
@@ -659,18 +650,31 @@
             {% assign folder_name = item.path | split: '/' | first %}
             {% assign folder_path_token = folder_name | append: '/' %}
             {% assign label = folder_name | replace: '-', ' ' | replace: '_', ' ' %}
-            <a href="{{ item.url | relative_url }}" {% if page.path contains folder_path_token %}class="active" aria-current="page"{% endif %}>{{ label }}</a>
+            <a href="{{ item.url | relative_url }}" {% if page.path contains folder_path_token %}class="active" aria-current="page"{% endif %} title="Open the {{ label }} guide" aria-label="Open the {{ label }} guide">{{ label }}</a>
           {% endif %}
         {% endfor %}
         <div class="search-box">
           <form role="search" action="{{ '/search.json' | relative_url }}" onsubmit="return false;">
             <label class="sr-only" for="search-input">Search site</label>
-            <input type="search" id="search-input" placeholder="Search site..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" aria-controls="results-container" aria-describedby="search-status">
+            <input type="search" id="search-input" placeholder="Search site..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" aria-controls="results-container" aria-describedby="search-status" title="Search the full site" aria-label="Search the full site">
             <div id="search-status" class="search-status" aria-live="polite"></div>
             <ul id="results-container" role="listbox" hidden></ul>
           </form>
         </div>
       </nav>
+
+      <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false" onclick="toggleMenu(this)" aria-label="Open navigation" title="Open navigation">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+      <button class="view-toggle" type="button" aria-label="Toggle wide view" aria-pressed="false" title="Wide view" onclick="toggleWideView(this)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3.5" y="4.5" width="4.5" height="15" rx="1"></rect>
+          <rect x="9.25" y="4.5" width="5.5" height="15" rx="1"></rect>
+          <rect x="16" y="4.5" width="4.5" height="15" rx="1"></rect>
+        </svg>
+      </button>
     </div>
   </header>
 
