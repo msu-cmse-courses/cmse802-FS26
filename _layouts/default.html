@@ -69,33 +69,6 @@
       height: auto;
     }
 
-    blockquote {
-      margin: 1.5rem 0;
-      padding: 0.9rem 1.1rem;
-      background: var(--panel-alt);
-      border-left: 4px solid var(--accent);
-      border-radius: 0.6rem;
-      color: var(--text);
-      box-shadow: 0 4px 14px rgba(31, 35, 40, 0.05);
-    }
-
-    blockquote p {
-      margin: 0.4rem 0;
-    }
-
-    blockquote p:first-child {
-      font-style: italic;
-    }
-
-    blockquote cite,
-    blockquote footer {
-      display: block;
-      margin-top: 0.55rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-style: normal;
-    }
-
     .sr-only {
       position: absolute;
       width: 1px;
@@ -169,6 +142,23 @@
       gap: 0.75rem;
     }
 
+    .view-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border: 1px solid var(--border);
+      border-radius: 0.8rem;
+      background: var(--panel-bg);
+      color: var(--text);
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      padding: 0;
+      line-height: 0;
+    }
+
     .menu-toggle {
       display: none;
       align-items: center;
@@ -182,6 +172,16 @@
       font-size: 1.1rem;
       cursor: pointer;
       box-shadow: var(--shadow);
+      padding: 0;
+      line-height: 0;
+    }
+
+    .menu-toggle svg,
+    .view-toggle svg {
+      display: block;
+      width: 1.1rem;
+      height: 1.1rem;
+      stroke: currentColor;
     }
 
     .nav-links {
@@ -282,6 +282,23 @@
       margin: 0 auto;
       padding: 1.5rem;
       align-items: start;
+    }
+
+    body.wide-view .layout {
+      grid-template-columns: 1fr;
+    }
+
+    body.wide-view .left,
+    body.wide-view .right {
+      display: none;
+    }
+
+    body.wide-view .menu-toggle {
+      display: none !important;
+    }
+
+    body.wide-view main {
+      grid-column: 1 / -1;
     }
 
     .left,
@@ -511,6 +528,10 @@
     }
 
     @media (max-width: 900px) {
+      .view-toggle {
+        display: none !important;
+      }
+
       .top-nav {
         flex-wrap: wrap;
         align-items: flex-start;
@@ -582,13 +603,24 @@
   <header class="top-nav">
     <div class="nav-left">
       <a href="{{ '/' | relative_url }}" aria-label="Go to the schedule home page">
-        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Michigan State University logo">
+        <img src="{{ '/assets/img/MSU.png' | relative_url }}" alt="Michigan State University logo">
       </a>
       <div class="site-title">{{ site.title | default: "Course Website" }}</div>
     </div>
 
     <div class="nav-right">
-      <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+      <button class="view-toggle" type="button" aria-label="Toggle wide view" aria-pressed="false" title="Wide view" onclick="toggleWideView(this)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3.5" y="4.5" width="4.5" height="15" rx="1"></rect>
+          <rect x="9.25" y="4.5" width="5.5" height="15" rx="1"></rect>
+          <rect x="16" y="4.5" width="4.5" height="15" rx="1"></rect>
+        </svg>
+      </button>
+      <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false" onclick="toggleMenu(this)" aria-label="Open navigation" title="Open navigation">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
 
       <nav id="nav-links" class="nav-links" aria-label="Primary">
         <a href="{{ '/' | relative_url }}" {% if page.layout == "schedule" %}class="active" aria-current="page"{% endif %}>Schedule</a>
@@ -618,7 +650,8 @@
   {{ content }}
 
   <footer class="site-footer">
-    <div class="footer-content">ß
+    <div class="footer-content">
+      <p>This course website is a reusable template for schedule-first course delivery.</p>
       <p class="footer-license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
       {% if site.github and site.github.repository_url %}
       <p>Suggestions and improvements are welcome via the <a href="{{ site.github.repository_url }}">GitHub repository</a>.</p>
@@ -783,6 +816,55 @@
       const expanded = nav.classList.toggle("open");
       button.setAttribute("aria-expanded", expanded ? "true" : "false");
     }
+
+    const threeColumnIcon = `
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3.5" y="4.5" width="4.5" height="15" rx="1"></rect>
+        <rect x="9.25" y="4.5" width="5.5" height="15" rx="1"></rect>
+        <rect x="16" y="4.5" width="4.5" height="15" rx="1"></rect>
+      </svg>
+    `;
+
+    const wideIcon = `
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 6.5h14v11H5z"></path>
+      </svg>
+    `;
+
+    function setWideView(button, enabled) {
+      const isWide = document.body.classList.toggle("wide-view", enabled);
+      button.setAttribute("aria-pressed", String(isWide));
+      button.innerHTML = isWide ? threeColumnIcon : wideIcon;
+      const label = isWide ? "Switch to single column view" : "Switch to single column view";
+      button.setAttribute("title", label);
+      button.setAttribute("aria-label", label);
+      try {
+        localStorage.setItem("courseWideView", String(isWide));
+      } catch (error) {
+        // Ignore storage issues in restricted environments.
+      }
+    }
+
+    function toggleWideView(button) {
+      const enabled = button.getAttribute("aria-pressed") !== "true";
+      setWideView(button, enabled);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const wideToggle = document.querySelector(".view-toggle");
+      if (!wideToggle) {
+        return;
+      }
+
+      let enabled = false;
+      try {
+        enabled = localStorage.getItem("courseWideView") === "true";
+      } catch (error) {
+        enabled = false;
+      }
+
+      setWideView(wideToggle, enabled);
+    });
   </script>
 </body>
 </html>
