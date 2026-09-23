@@ -641,7 +641,7 @@
         {% if today_url %}
           <a href="{{ today_url }}" title="Jump to the current or next class session" aria-label="Current Class: jump to the current or next class session">Current Class</a>
         {% endif %}
-        <a href="{{ '/' | relative_url }}" {% if page.layout == "schedule" %}class="active" aria-current="page"{% endif %} title="Browse the full course schedule" aria-label="Browse the full course schedule">Schedule</a>
+        <a href="{{ '/' | relative_url }}" class="schedule-link{% if page.layout == "schedule" %} active{% endif %}" {% if page.layout == "schedule" %}aria-current="page"{% endif %} title="Browse the full course schedule" aria-label="Browse the full course schedule">Schedule</a>
 
         {% assign guide_root_candidates = site.pages | where: "layout", "guide" | sort: "path" %}
         {% for item in guide_root_candidates %}
@@ -866,7 +866,7 @@
       const isWide = document.body.classList.toggle("wide-view", enabled);
       button.setAttribute("aria-pressed", String(isWide));
       button.innerHTML = isWide ? threeColumnIcon : wideIcon;
-      const label = isWide ? "Switch to single column view" : "Switch to single column view";
+      const label = isWide ? "Switch to three-column view" : "Switch to single column view";
       button.setAttribute("title", label);
       button.setAttribute("aria-label", label);
       try {
@@ -887,10 +887,30 @@
         return;
       }
 
+      const scheduleLink = document.querySelector(".schedule-link");
+      if (scheduleLink) {
+        scheduleLink.addEventListener("click", function () {
+          setWideView(wideToggle, false);
+        });
+      }
+
+      function syncWideViewForViewport() {
+        if (window.innerWidth <= 900) {
+          setWideView(wideToggle, false);
+        }
+      }
+
+      window.addEventListener("resize", syncWideViewForViewport);
+      window.matchMedia("(max-width: 900px)").addEventListener?.("change", syncWideViewForViewport);
+
       let enabled = false;
       try {
         enabled = localStorage.getItem("courseWideView") === "true";
       } catch (error) {
+        enabled = false;
+      }
+
+      if (window.innerWidth <= 900) {
         enabled = false;
       }
 
