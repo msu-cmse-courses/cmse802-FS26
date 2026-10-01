@@ -315,7 +315,7 @@
     const nextScheduledDate = sortedDates.find((date) => date >= today);
     const isDuringSemester = firstScheduleDate && today >= firstScheduleDate && today <= lastScheduleDate;
     const initialSelectedDate = isDuringSemester ? today : (nextScheduledDate || today);
-    const initialMonthDate = parseISODate(initialSelectedDate);
+    const initialMonthDate = parseISODate(firstScheduleDate || initialSelectedDate);
     let currentMonth = new Date(initialMonthDate.getFullYear(), initialMonthDate.getMonth(), 1);
     let selectedDate = initialSelectedDate;
 
