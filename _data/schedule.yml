@@ -79,13 +79,13 @@
 - date: '2026-10-06'
   week_start: '2026-10-05'
   title: Physical Modeling - Day 1
-  url: null
+  url: /Schedule/11-class-physical-modeling-day-1
   event_type: class
   day_id: Day11
 - date: '2026-10-08'
   week_start: '2026-10-05'
   title: Physical Modeling - Day 2
-  url: null
+  url: /Schedule/12-class-physical-modeling-day-2
   event_type: class
   day_id: Day12
 - date: '2026-10-11'
@@ -97,13 +97,13 @@
 - date: '2026-10-13'
   week_start: '2026-10-12'
   title: Physical Modeling - Day 3
-  url: null
+  url: /Schedule/13-class-physical-modeling-day-3
   event_type: class
   day_id: Day13
 - date: '2026-10-15'
   week_start: '2026-10-12'
   title: Physical Modeling - Day 4
-  url: null
+  url: /Schedule/14-class-physical-modeling-day-4
   event_type: class
   day_id: Day14
 - date: '2026-10-20'

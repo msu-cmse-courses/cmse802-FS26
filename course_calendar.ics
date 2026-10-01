@@ -131,20 +131,24 @@ DESCRIPTION:Course day: Day10\\nDetails: /cmse802-FS26/Schedule/10-class-an
 URL:/cmse802-FS26/Schedule/10-class-analytical-modeling-day-4
 END:VEVENT
 BEGIN:VEVENT
-UID:b084a88f8d7f6821348f43dd31f993369ee23f05@course-website-template
+UID:0d887f6e46769f75fe1ac24c6bfb942ded0815b9@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Physical Modeling - Day 1
 DTSTART:20261006T123000
 DTEND:20261006T134000
-DESCRIPTION:Course day: Day11
+DESCRIPTION:Course day: Day11\\nDetails: /cmse802-FS26/Schedule/11-class-ph
+ ysical-modeling-day-1
+URL:/cmse802-FS26/Schedule/11-class-physical-modeling-day-1
 END:VEVENT
 BEGIN:VEVENT
-UID:60c6df9a9019862ef8e00935a4c5a6bcf22c9078@course-website-template
+UID:7a31b0ea809cdcc5dfa73e4f6608c28bf43f7b0d@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Physical Modeling - Day 2
 DTSTART:20261008T123000
 DTEND:20261008T134000
-DESCRIPTION:Course day: Day12
+DESCRIPTION:Course day: Day12\\nDetails: /cmse802-FS26/Schedule/12-class-ph
+ ysical-modeling-day-2
+URL:/cmse802-FS26/Schedule/12-class-physical-modeling-day-2
 END:VEVENT
 BEGIN:VEVENT
 UID:e0a05b755620e8810a31f2fb714ed793b4386e01@course-website-template
@@ -157,20 +161,24 @@ DESCRIPTION:Course day: Day12\\nDetails: /cmse802-FS26/Schedule/12-next-sun
 URL:/cmse802-FS26/Schedule/12-next-sun-testing-validation-milestone
 END:VEVENT
 BEGIN:VEVENT
-UID:9dfc388d1efa07a4627dd9c0fde0aacbb8524d55@course-website-template
+UID:1490b9ec40436038805f618af3f8e02e7441b3e4@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Physical Modeling - Day 3
 DTSTART:20261013T123000
 DTEND:20261013T134000
-DESCRIPTION:Course day: Day13
+DESCRIPTION:Course day: Day13\\nDetails: /cmse802-FS26/Schedule/13-class-ph
+ ysical-modeling-day-3
+URL:/cmse802-FS26/Schedule/13-class-physical-modeling-day-3
 END:VEVENT
 BEGIN:VEVENT
-UID:c61f48dd5793ea0574385e6b67d6985b1e5a852c@course-website-template
+UID:6165a2b0dee28335ebef09911d20532ecc503e6f@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Physical Modeling - Day 4
 DTSTART:20261015T123000
 DTEND:20261015T134000
-DESCRIPTION:Course day: Day14
+DESCRIPTION:Course day: Day14\\nDetails: /cmse802-FS26/Schedule/14-class-ph
+ ysical-modeling-day-4
+URL:/cmse802-FS26/Schedule/14-class-physical-modeling-day-4
 END:VEVENT
 BEGIN:VEVENT
 UID:5dee8cb8ea7145f48778e642970cdeefc587211f@course-website-template
