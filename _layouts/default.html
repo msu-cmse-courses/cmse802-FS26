@@ -603,7 +603,7 @@
   <header class="top-nav">
     <div class="nav-left">
       <a href="{{ '/' | relative_url }}" aria-label="Go to the schedule home page">
-        <img src="{{ '/assets/img/MSU.png' | relative_url }}" alt="Michigan State University logo">
+        <img src="{{ site.logo | default: '/assets/img/MSU.png' | relative_url }}" alt="{{ site.title | default: 'Course Website' }} logo">
       </a>
       <div class="site-title">{{ site.title | default: "Course Website" }}</div>
     </div>
