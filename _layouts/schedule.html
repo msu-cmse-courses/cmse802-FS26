@@ -5,6 +5,7 @@ layout: default
 {% assign schedule_items = site.data.schedule | sort: "date" %}
 {% assign prev_item = nil %}
 {% assign next_item = nil %}
+{% assign current_item = nil %}
 {% assign found_current = false %}
 {% assign page_url_norm = page.url | replace: '.html', '' | replace: '/index', '' %}
 {% assign page_url_norm_slash = page_url_norm | append: '/' %}
@@ -19,6 +20,7 @@ layout: default
 
 		{% if item_matches_current %}
 			{% assign found_current = true %}
+			{% assign current_item = item %}
 		{% elsif found_current and next_item == nil %}
 			{% assign next_item = item %}
 			{% break %}
@@ -78,7 +80,11 @@ layout: default
 				</div>
 
 				<div>
-					<a href="{{ '/' | relative_url }}">Full Schedule</a>
+					{% if current_item %}
+						<span aria-label="Current schedule date: {{ current_item.date | date: '%A %B %-d, %Y' }}">{{ current_item.date | date: "%A %B %-d, %Y" }}</span>
+					{% else %}
+						<span>Schedule</span>
+					{% endif %}
 				</div>
 
 				<div>
