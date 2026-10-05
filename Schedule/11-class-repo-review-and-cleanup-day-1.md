@@ -5,6 +5,8 @@ published: true
 ---
 # Repository Review and Cleanup - Day 1
 
+This week we are going to take a break from in-class assignments and spend a little time focusing our our project git repositories.  We will start back in with physical-modeling next week. 
+
 ## Agenda (80 minutes)
 
 1. 5 min - Check-in and goals for the two-day repository tune-up

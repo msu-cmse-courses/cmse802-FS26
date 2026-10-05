@@ -226,12 +226,14 @@ DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 END:VEVENT
 BEGIN:VEVENT
-UID:197222830bc9376fe8dffd3ab1c7585e120bb3fd@course-website-template
+UID:5c22747b87c309841bda28a0576f8ebf87e6d898@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Data Driven Modeling - Day 1
+SUMMARY:Repository Review Checkpoint
 DTSTART:20261029T123000
 DTEND:20261029T134000
-DESCRIPTION:Course day: Day17
+DESCRIPTION:Course day: Day17\\nDetails: /cmse802-FS26/Schedule/17-class-re
+ po-review-checkpoint
+URL:/cmse802-FS26/Schedule/17-class-repo-review-checkpoint
 END:VEVENT
 BEGIN:VEVENT
 UID:5b976b7f410503e4ca866bfebca5696c206f3d48@course-website-template
@@ -242,9 +244,9 @@ DTEND:20261103T134000
 DESCRIPTION:Course day: Day18
 END:VEVENT
 BEGIN:VEVENT
-UID:9063d4fb44211d74d57607bd9ab7d1fdb9df0a81@course-website-template
+UID:6f421362febe7b878a8299e2e74f5ca621203c91@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Data Driven Modeling - Day 3
+SUMMARY:Data Driven Modeling - Day 1
 DTSTART:20261105T123000
 DTEND:20261105T134000
 DESCRIPTION:Course day: Day19
@@ -260,17 +262,17 @@ DESCRIPTION:Course day: Day18\\nDetails: /cmse802-FS26/Schedule/18-next-sun
 URL:/cmse802-FS26/Schedule/18-next-sun-project-systems-milestone
 END:VEVENT
 BEGIN:VEVENT
-UID:a9c766903f4a0cf017ccc4a416d41c921c9e03c5@course-website-template
+UID:415470a677aeb2dadc0bb8e9714df71854c45258@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Data Driven Modeling - Day 4
+SUMMARY:Data Driven Modeling - Day 3
 DTSTART:20261110T123000
 DTEND:20261110T134000
 DESCRIPTION:Course day: Day20
 END:VEVENT
 BEGIN:VEVENT
-UID:9f173d3287483ebaee79e0d68f31f0aeb077e7d0@course-website-template
+UID:2780c806cf1f311be49cd7ef2b0ab9f6cdabec55@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Data Driven Modeling - Day 4
 DTSTART:20261112T123000
 DTEND:20261112T134000
 DESCRIPTION:Course day: Day21
