@@ -6,6 +6,14 @@ layout: guide
 
 Use this form during live partner review. Keep feedback specific, observable, and actionable.
 
+## How to Use This Form
+
+This page is meant to be copied, not filled in on the website. Open the [raw Markdown](https://raw.githubusercontent.com/msu-cmse-courses/cmse802-FS26/main/Guide/21-Peer-Review-Quick-Form.md) (or the [GitHub view](https://github.com/msu-cmse-courses/cmse802-FS26/blob/main/Guide/21-Peer-Review-Quick-Form.md) and use the copy button), copy everything below the line, and paste it into a text editor or your notes. Fill it in while you review.
+
+When you finish, **email the completed form to your teammate and CC the instructor**. Email works no matter where a repository is hosted (GitHub, GitLab, or elsewhere) and whether or not issues are enabled. Paste the text directly into the body of the email so it can be read without opening an attachment. (maybe ask your instructor why Learning Markdown is so useful)
+
+---
+
 ## Session Info
 - Reviewer:
 - Project teammate reviewed:
