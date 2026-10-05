@@ -44,6 +44,11 @@ Most of the semester will center on four major in-class assignments. Each assign
 
 Each project page gives a short overview and links to the repository where day-to-day work will happen.
 
+## Review and Reference Sections
+
+- **Peer Review (Section 20):** The [Peer Review Checklist](./20-Peer-Review-Checklist) and the one-page [Quick Peer Review Form](./21-Peer-Review-Quick-Form) are used for in-class code review days and for checking your own repository for handoff readiness.
+- **Reference Material (Section 30):** [External Links](./30-External_Links) and [Getting to Know Git](./31-Getting-to-know-git) support the tools and workflow used throughout the semester.
+
 This guide is organized to reduce duplication. Concepts are generally explained in one place and referenced elsewhere. If you find something that is unclear, outdated, inconsistent, or missing, please let the instructional team know or submit an issue through the course repository.
 
 ## A Note About Professional Judgment

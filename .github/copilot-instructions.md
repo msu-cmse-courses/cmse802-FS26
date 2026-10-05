@@ -6,8 +6,8 @@ Use this repository to run and improve a cohesive graduate course on research so
 ## Always Start Here (Required Context)
 Before proposing major edits, read these files to restore project context:
 - scratch/CMSE802_Course_Vision_and_Implementation_Plan.md
-- scratch/Student_Peer_Review_Checklist_SPRRL.md
-- scratch/Student_Peer_Review_Quick_Form_SPRRL.md
+- Guide/20-Peer-Review-Checklist.md
+- Guide/21-Peer-Review-Quick-Form.md
 - README.md
 - schedule.md
 - course_schedule/Calendar_Logistics.md
