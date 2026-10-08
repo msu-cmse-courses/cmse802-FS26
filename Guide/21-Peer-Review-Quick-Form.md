@@ -6,6 +6,8 @@ layout: guide
 
 Use this form during live partner review. Keep feedback specific, observable, and actionable.
 
+[Use this link to get to the raw Markdown text for this file](https://github.com/msu-cmse-courses/cmse802-FS26/raw/refs/heads/main/Guide/21-Peer-Review-Quick-Form.md)
+
 ## How to Use This Form
 
 This page is meant to be copied, not filled in on the website. Open the [raw Markdown](https://raw.githubusercontent.com/msu-cmse-courses/cmse802-FS26/main/Guide/21-Peer-Review-Quick-Form.md) (or the [GitHub view](https://github.com/msu-cmse-courses/cmse802-FS26/blob/main/Guide/21-Peer-Review-Quick-Form.md) and use the copy button), copy everything below the line, and paste it into a text editor or your notes. Fill it in while you review.
