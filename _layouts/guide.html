@@ -5,12 +5,25 @@ layout: default
 {% assign current_folder_path = current_folder | append: '/' %}
 {% assign guide_pages = site.pages | where: "layout", "guide" | sort: "path" %}
 {% assign section_label = current_folder | replace: '-', ' ' | replace: '_', ' ' %}
-{% assign first_page = nil %}
+{% assign section_index = nil %}
+{% for item in guide_pages %}
+  {% if item.path contains current_folder_path and item.name == "index.md" %}
+    {% assign section_index = item %}
+  {% endif %}
+{% endfor %}
+{% assign first_page = section_index %}
 {% assign prev = nil %}
 {% assign next = nil %}
 {% assign current_page_found = false %}
+{% if section_index %}
+  {% if section_index.url == page.url %}
+    {% assign current_page_found = true %}
+  {% else %}
+    {% assign prev = section_index %}
+  {% endif %}
+{% endif %}
 {% for item in guide_pages %}
-  {% if item.path contains current_folder_path %}
+  {% if item.path contains current_folder_path and item.name != "index.md" %}
     {% if first_page == nil %}
       {% assign first_page = item %}
     {% endif %}
@@ -32,8 +45,15 @@ layout: default
 
       {% if guide_pages.size > 0 %}
         <ul class="guide-list">
+          {% if section_index %}
+            <li class="guide-item guide-item-section">
+              <a href="{{ section_index.url | relative_url }}" class="guide-link guide-link-section{% if section_index.url == page.url %} active{% endif %}" {% if section_index.url == page.url %}aria-current="page"{% endif %}>
+                {{ section_index.title }}
+              </a>
+            </li>
+          {% endif %}
           {% for item in guide_pages %}
-            {% if item.path contains current_folder_path %}
+            {% if item.path contains current_folder_path and item.name != "index.md" %}
               {% assign file_prefix = item.name | split: '-' | first | split: '.' | first %}
               {% assign nav_order = item.order | default: file_prefix | plus: 0 %}
               {% assign sublevel = nav_order | modulo: 10 %}
@@ -65,7 +85,6 @@ layout: default
             <a href="{{ first_page.url | relative_url }}">{{ first_page.title }}</a>
           {% endif %}
         </div>
-        <div>
         <div>
           {% if next %}
             <a href="{{ next.url | relative_url }}">{{ next.title }} →</a>

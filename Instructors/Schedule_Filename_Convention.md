@@ -30,8 +30,9 @@ Use this checklist when starting a new course site from this template.
 	- Start with core `NN-class-*` pages.
 	- Add due dates/checkpoints using `NN-same-*`, `NN-plus-*`, and `NN-next-*` as needed.
 4. Add reference/policy pages under `Guide/` (and other top-level reference folders if needed).
-	- Keep an entry page named `00-*.md` in each reference folder.
+	- Keep an entry page named `index.md` in each reference folder.
 	- Use `layout: guide` for reference pages.
+	- To keep a section available by URL while excluding it from the primary menu and site search, set its folder to `unlisted` in `section_visibility` in `/_config.yml`.
 5. Generate schedule data.
 	- Run the schedule generation command from the Makefile for your semester.
 	- Confirm `_data/schedule.yml`, `_data/schedule_warnings.yml`, and `course_calendar.ics` update.
@@ -47,12 +48,12 @@ Pages in `Guide/`, `Schedule/`, and `index.md` that start with `**⚠️TODO:**`
 
 - Instructors should either delete these files or replace their full content.
 - Keep filename conventions in `Schedule/` if you want generated schedule links to keep working.
-- For reference folders like `Guide/`, keep one `00-*.md` entry page per folder for menu routing.
+- For reference folders like `Guide/`, keep one `index.md` entry page per folder for menu routing.
 
 Recommended replacement order:
 
 1. Replace `index.md` with a real course landing page.
-2. Replace `Guide/00-index.md` and `Guide/01-Syllabus.md`.
+2. Replace `Guide/index.md` and `Guide/01-Syllabus.md`.
 3. Replace all `Schedule/NN-class-*.md` files used this semester.
 4. Re-run `make schedule-fall` or `make schedule-spring`.
 

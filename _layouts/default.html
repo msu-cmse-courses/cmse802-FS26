@@ -640,8 +640,7 @@
 
         {% assign guide_root_candidates = site.pages | where: "layout", "guide" | sort: "path" %}
         {% for item in guide_root_candidates %}
-          {% assign prefix = item.name | split: '-' | first | split: '.' | first %}
-          {% if prefix == "00" %}
+          {% if item.name == "index.md" %}
             {% assign folder_name = item.path | split: '/' | first %}
             {% assign folder_path_token = folder_name | append: '/' %}
             {% assign label = folder_name | replace: '-', ' ' | replace: '_', ' ' %}
