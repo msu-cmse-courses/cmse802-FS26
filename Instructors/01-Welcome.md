@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # Day 1 Instructor Notes
 
 ## Goals for the Day
