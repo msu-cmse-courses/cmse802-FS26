@@ -4,12 +4,6 @@ date: '2026-10-13'
 published: true
 ---
 
-
-layout: schedule
-published: true
-date: '2026-10-06'
----
-
 # Physical Modeling - Day 1
 
 Repository: <https://github.com/colbrydi/physical-modeling>
