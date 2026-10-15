@@ -2,6 +2,8 @@
 layout: guide
 ---
 
+# Course Guild and Resouces
+
 CMSE 802 serves graduate students, especially PhD students, who are not primarily trained as software engineers but who must build software to complete meaningful research.
 
 This course should feel like a dissertation writing seminar, but for research software:
