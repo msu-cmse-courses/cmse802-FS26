@@ -5,6 +5,10 @@ logo: /assets/img/logo.png
 favicon: /assets/img/favicon.ico
 baseurl: /cmse802-FS26
 permalink: /:year/:month/:day/:title
+# Unlisted sections remain available by URL but are omitted from the primary
+# navigation and site search. Sections not listed here remain discoverable.
+section_visibility:
+  Instructors: unlisted
 exclude:
   - envs/
   - .bundle/

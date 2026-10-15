@@ -645,7 +645,10 @@
             {% assign folder_name = item.path | split: '/' | first %}
             {% assign folder_path_token = folder_name | append: '/' %}
             {% assign label = folder_name | replace: '-', ' ' | replace: '_', ' ' %}
-            <a href="{{ item.url | relative_url }}" {% if page.path contains folder_path_token %}class="active" aria-current="page"{% endif %} title="Open the {{ label }} guide" aria-label="Open the {{ label }} guide">{{ label }}</a>
+            {% assign visibility = site.section_visibility[folder_name] | default: "listed" %}
+            {% if visibility != "unlisted" %}
+              <a href="{{ item.url | relative_url }}" {% if page.path contains folder_path_token %}class="active" aria-current="page"{% endif %} title="Open the {{ label }} guide" aria-label="Open the {{ label }} guide">{{ label }}</a>
+            {% endif %}
           {% endif %}
         {% endfor %}
         <div class="search-box">

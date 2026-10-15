@@ -3,11 +3,18 @@ layout: none
 ---
 
 [
+{% assign first_search_result = true %}
 {% for page in site.pages %}
+  {% assign folder_name = page.path | split: '/' | first %}
+  {% assign visibility = site.section_visibility[folder_name] | default: "listed" %}
+  {% if visibility != "unlisted" %}
+  {% unless first_search_result %},{% endunless %}
   {
     "title": {{ page.title | jsonify }},
     "url": {{ page.url | relative_url | jsonify }},
     "content": {{ page.content | strip_html | strip_newlines | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
+  }
+  {% assign first_search_result = false %}
+  {% endif %}
 {% endfor %}
 ]

@@ -5,16 +5,24 @@ layout: default
 {% assign current_folder_path = current_folder | append: '/' %}
 {% assign guide_pages = site.pages | where: "layout", "guide" | sort: "path" %}
 {% assign section_label = current_folder | replace: '-', ' ' | replace: '_', ' ' %}
-{% assign current_index = -1 %}
+{% assign first_page = nil %}
+{% assign prev = nil %}
+{% assign next = nil %}
+{% assign current_page_found = false %}
 {% for item in guide_pages %}
-  {% if item.url == page.url %}
-    {% assign current_index = forloop.index0 %}
+  {% if item.path contains current_folder_path %}
+    {% if first_page == nil %}
+      {% assign first_page = item %}
+    {% endif %}
+    {% if item.url == page.url %}
+      {% assign current_page_found = true %}
+    {% elsif current_page_found and next == nil %}
+      {% assign next = item %}
+    {% elsif current_page_found == false %}
+      {% assign prev = item %}
+    {% endif %}
   {% endif %}
 {% endfor %}
-{% assign first_page = guide_pages | first %}
-{% assign last_index = guide_pages.size | minus: 1 %}
-{% assign prev_index = current_index | minus: 1 %}
-{% assign next_index = current_index | plus: 1 %}
 {% assign parts = content | split:'<!-- TOC_START -->' %}
 
 <div class="layout">
@@ -44,11 +52,10 @@ layout: default
   </aside>
 
   <main id="content" tabindex="-1">
-    {% if current_index >= 0 and guide_pages.size > 0 %}
+    {% if first_page %}
       <nav class="page-nav" aria-label="Course guide page navigation">
         <div>
-          {% if current_index > 0 %}
-            {% assign prev = guide_pages[prev_index] %}
+          {% if prev %}
             <a href="{{ prev.url | relative_url }}">← {{ prev.title }}</a>
           {% endif %}
         </div>
@@ -58,10 +65,9 @@ layout: default
             <a href="{{ first_page.url | relative_url }}">{{ first_page.title }}</a>
           {% endif %}
         </div>
-
         <div>
-          {% if current_index < last_index %}
-            {% assign next = guide_pages[next_index] %}
+        <div>
+          {% if next %}
             <a href="{{ next.url | relative_url }}">{{ next.title }} →</a>
           {% endif %}
         </div>
