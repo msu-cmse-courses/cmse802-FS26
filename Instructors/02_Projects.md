@@ -1,4 +1,4 @@
-# Day 2 Instructor Notes
+# Day 2 Instructor Notes - Projects
 
 ## Goals for the Day
 

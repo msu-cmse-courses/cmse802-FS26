@@ -1,4 +1,4 @@
-# Days 4-5 Instructor Notes
+# Days 4-5 Continue Modeling Intro
 
 ## Goals for the Day
 

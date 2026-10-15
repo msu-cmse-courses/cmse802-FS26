@@ -2,7 +2,7 @@
 layout: guide
 ---
 
-# Day 1 Instructor Notes
+# Day 1 Instructor Notes - Welcome
 
 ## Goals for the Day
 

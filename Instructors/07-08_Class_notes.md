@@ -1,4 +1,4 @@
-# Days 7-8 Instructor Notes
+# Days 7-8 Start Analytical Modeling
 
 ## Goals for the Day
 

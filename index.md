@@ -20,7 +20,7 @@ The main objective is not to complete disconnected assignments. The objective is
 
 This site is organized around the semester schedule. Use the class calendar and schedule pages as the primary source for weekly expectations, deadlines, and links to class materials.
 
-For course policies, workflow expectations, and reference material, start with the [Course Guide](./Guide/00-index).
+For course policies, workflow expectations, and reference material, start with the [Course Guide](./Guide/).
 
 {% include schedule_widgets.html part="calendar" calendar_title="Course Calendar" subscription_path="/course_calendar.ics" %}
 {% include schedule_widgets.html part="assets" %}

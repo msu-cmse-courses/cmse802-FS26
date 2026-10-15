@@ -1,4 +1,4 @@
-# Day 6 Instructor Notes
+# Day 6 Finish introduction to modeling
 
 ## Goals for the Day
 
