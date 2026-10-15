@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # Day 3 Start Modeling Intro
 
 ## Goals for the Day

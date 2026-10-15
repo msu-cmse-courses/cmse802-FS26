@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # Days 13-16 - Physical Modeling Repository Instructor Notes
 
 ## Overview

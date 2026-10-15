@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # Days 4-5 Continue Modeling Intro
 
 ## Goals for the Day

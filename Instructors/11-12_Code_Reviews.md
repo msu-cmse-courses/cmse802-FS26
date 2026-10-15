@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # Days 11-12 - Code Review and Repository Cleanup Days
 
 ## Goals for the Week

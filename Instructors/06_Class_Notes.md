@@ -1,3 +1,7 @@
+---
+layout: guide
+---
+
 # Day 6 Finish introduction to modeling
 
 ## Goals for the Day
