@@ -1,7 +1,8 @@
 ---
 layout: schedule
-date: '2026-11-08'
+date: '2026-11-15'
 ---
+
 
 
 # Milestone 5: Project Systems and Automation

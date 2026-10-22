@@ -252,16 +252,6 @@ DTEND:20261105T134000
 DESCRIPTION:Course day: Day19
 END:VEVENT
 BEGIN:VEVENT
-UID:e5ec8e57fffae8ef7dc0c7612a4df46441862b96@course-website-template
-DTSTAMP:20261210T000000Z
-SUMMARY:Milestone 5: Project Systems and Automation
-DTSTART;VALUE=DATE:20261108
-DTEND;VALUE=DATE:20261109
-DESCRIPTION:Course day: Day18\\nDetails: /cmse802-FS26/Schedule/18-next-sun
- -project-systems-milestone
-URL:/cmse802-FS26/Schedule/18-next-sun-project-systems-milestone
-END:VEVENT
-BEGIN:VEVENT
 UID:415470a677aeb2dadc0bb8e9714df71854c45258@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Data Driven Modeling - Day 3
@@ -278,6 +268,16 @@ DTEND:20261112T134000
 DESCRIPTION:Course day: Day21
 END:VEVENT
 BEGIN:VEVENT
+UID:eb713fd5c0182409f8d0cc9c79a3ab2417d9a4ac@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 5: Project Systems and Automation
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+DESCRIPTION:Course day: Day21\\nDetails: /cmse802-FS26/Schedule/21-next-sun
+ -project-systems-milestone
+URL:/cmse802-FS26/Schedule/21-next-sun-project-systems-milestone
+END:VEVENT
+BEGIN:VEVENT
 UID:4945f3eddf6a29c7fab60182e3c628f449897ccb@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:TBD
@@ -292,16 +292,6 @@ SUMMARY:TBD
 DTSTART:20261119T123000
 DTEND:20261119T134000
 DESCRIPTION:Course day: Day23
-END:VEVENT
-BEGIN:VEVENT
-UID:41c2049e31f410561d45eb0a382cf7b5a6bb9183@course-website-template
-DTSTAMP:20261210T000000Z
-SUMMARY:Milestone 5: Release Candidate and Handoff Package
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261123
-DESCRIPTION:Course day: Day22\\nDetails: /cmse802-FS26/Schedule/22-next-sun
- -release-candidate-milestone
-URL:/cmse802-FS26/Schedule/22-next-sun-release-candidate-milestone
 END:VEVENT
 BEGIN:VEVENT
 UID:9daa6ab07658815678a2b4f3588868b1c21b587c@course-website-template

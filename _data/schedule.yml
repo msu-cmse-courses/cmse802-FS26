@@ -154,12 +154,6 @@
   url: null
   event_type: class
   day_id: Day19
-- date: '2026-11-08'
-  week_start: '2026-11-02'
-  title: 'Milestone 5: Project Systems and Automation'
-  url: /Schedule/18-next-sun-project-systems-milestone
-  event_type: next
-  day_id: Day18
 - date: '2026-11-10'
   week_start: '2026-11-09'
   title: Data Driven Modeling - Day 3
@@ -171,6 +165,12 @@
   title: Data Driven Modeling - Day 4
   url: null
   event_type: class
+  day_id: Day21
+- date: '2026-11-15'
+  week_start: '2026-11-09'
+  title: 'Milestone 5: Project Systems and Automation'
+  url: /Schedule/21-next-sun-project-systems-milestone
+  event_type: next
   day_id: Day21
 - date: '2026-11-17'
   week_start: '2026-11-16'
@@ -184,12 +184,6 @@
   url: null
   event_type: class
   day_id: Day23
-- date: '2026-11-22'
-  week_start: '2026-11-16'
-  title: 'Milestone 5: Release Candidate and Handoff Package'
-  url: /Schedule/22-next-sun-release-candidate-milestone
-  event_type: next
-  day_id: Day22
 - date: '2026-11-24'
   week_start: '2026-11-23'
   title: TBD
