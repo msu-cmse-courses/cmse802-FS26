@@ -174,20 +174,20 @@
   day_id: Day21
 - date: '2026-11-17'
   week_start: '2026-11-16'
-  title: TBD
-  url: null
+  title: Final Project Code Review - Day 1
+  url: /Schedule/22-class-final-project-code-review-day-1
   event_type: class
   day_id: Day22
 - date: '2026-11-19'
   week_start: '2026-11-16'
-  title: TBD
-  url: null
+  title: Final Project Code Review - Day 2
+  url: /Schedule/23-class-final-project-code-review-day-2
   event_type: class
   day_id: Day23
 - date: '2026-11-24'
   week_start: '2026-11-23'
-  title: TBD
-  url: null
+  title: LangChain and LangGraph - Day 1
+  url: /Schedule/24-class-langchain-langgraph-workflow-studio
   event_type: class
   day_id: Day24
 - date: '2026-11-26'
@@ -204,14 +204,14 @@
   day_id: null
 - date: '2026-12-01'
   week_start: '2026-11-30'
-  title: TBD
-  url: null
+  title: LangChain and LangGraph - Day 2
+  url: /Schedule/25-class-langchain-langgraph-day-2
   event_type: class
   day_id: Day25
 - date: '2026-12-03'
   week_start: '2026-11-30'
-  title: TBD
-  url: null
+  title: Final Project Code Review - Day 3
+  url: /Schedule/26-class-final-project-code-review-day-3
   event_type: class
   day_id: Day26
 - date: '2026-12-06'

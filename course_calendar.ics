@@ -278,28 +278,34 @@ DESCRIPTION:Course day: Day21\\nDetails: /cmse802-FS26/Schedule/21-next-sun
 URL:/cmse802-FS26/Schedule/21-next-sun-project-systems-milestone
 END:VEVENT
 BEGIN:VEVENT
-UID:4945f3eddf6a29c7fab60182e3c628f449897ccb@course-website-template
+UID:8af07e6e8b21d9e0c5e8a08adeae9d77f7286789@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Final Project Code Review - Day 1
 DTSTART:20261117T123000
 DTEND:20261117T134000
-DESCRIPTION:Course day: Day22
+DESCRIPTION:Course day: Day22\\nDetails: /cmse802-FS26/Schedule/22-class-fi
+ nal-project-code-review-day-1
+URL:/cmse802-FS26/Schedule/22-class-final-project-code-review-day-1
 END:VEVENT
 BEGIN:VEVENT
-UID:5195b850118e5b0d51f2dfa93e08f30623e9fec8@course-website-template
+UID:5d0280b0c8c68823785b918b6966b4c4aa7a376c@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Final Project Code Review - Day 2
 DTSTART:20261119T123000
 DTEND:20261119T134000
-DESCRIPTION:Course day: Day23
+DESCRIPTION:Course day: Day23\\nDetails: /cmse802-FS26/Schedule/23-class-fi
+ nal-project-code-review-day-2
+URL:/cmse802-FS26/Schedule/23-class-final-project-code-review-day-2
 END:VEVENT
 BEGIN:VEVENT
-UID:9daa6ab07658815678a2b4f3588868b1c21b587c@course-website-template
+UID:76ca4546a1a43a8dcf4cb1549be0589294a23c48@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:LangChain and LangGraph - Day 1
 DTSTART:20261124T123000
 DTEND:20261124T134000
-DESCRIPTION:Course day: Day24
+DESCRIPTION:Course day: Day24\\nDetails: /cmse802-FS26/Schedule/24-class-la
+ ngchain-langgraph-workflow-studio
+URL:/cmse802-FS26/Schedule/24-class-langchain-langgraph-workflow-studio
 END:VEVENT
 BEGIN:VEVENT
 UID:39a982c164b5c52f71ae3baa3f145f056fc18dcd@course-website-template
@@ -316,20 +322,24 @@ DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 END:VEVENT
 BEGIN:VEVENT
-UID:8debbf62c3e0264f70efe2a9db8345ea3909d607@course-website-template
+UID:5363745c2636d03af5eda474cfa927e38e5bb594@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:LangChain and LangGraph - Day 2
 DTSTART:20261201T123000
 DTEND:20261201T134000
-DESCRIPTION:Course day: Day25
+DESCRIPTION:Course day: Day25\\nDetails: /cmse802-FS26/Schedule/25-class-la
+ ngchain-langgraph-day-2
+URL:/cmse802-FS26/Schedule/25-class-langchain-langgraph-day-2
 END:VEVENT
 BEGIN:VEVENT
-UID:dbfedf2371210b37ce84c768b0ff3fbe34b61d13@course-website-template
+UID:01eeabd21d248ab13d6eb9274575ca269ee3e9d2@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:TBD
+SUMMARY:Final Project Code Review - Day 3
 DTSTART:20261203T123000
 DTEND:20261203T134000
-DESCRIPTION:Course day: Day26
+DESCRIPTION:Course day: Day26\\nDetails: /cmse802-FS26/Schedule/26-class-fi
+ nal-project-code-review-day-3
+URL:/cmse802-FS26/Schedule/26-class-final-project-code-review-day-3
 END:VEVENT
 BEGIN:VEVENT
 UID:73394c7ff9e2b7dc1ad9bda4e10fe6c52de34a64@course-website-template
