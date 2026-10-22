@@ -201,17 +201,6 @@ DESCRIPTION:Course day: Day16\\nDetails: /cmse802-FS26/Schedule/16-class-ph
 URL:/cmse802-FS26/Schedule/16-class-physical-modeling-day-4
 END:VEVENT
 BEGIN:VEVENT
-UID:3420c4e935e37e575c39a5163537f351bddb9215@course-website-template
-DTSTAMP:20261210T000000Z
-SUMMARY:Milestone 4: Documentation and Reproducibility Pass
-DTSTART;VALUE=DATE:20261025
-DTEND;VALUE=DATE:20261026
-DESCRIPTION:Course day: Day16\\nDetails: /cmse802-FS26/Schedule/16-next-sun
- -documentation-reproducibility-milestone
-URL:/cmse802-FS26/Schedule/16-next-sun-documentation-reproducibility-milest
- one
-END:VEVENT
-BEGIN:VEVENT
 UID:bb7a67a3d4e807bee59fff36b842916f2e7c9148@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Fall Break
@@ -234,6 +223,17 @@ DTEND:20261029T134000
 DESCRIPTION:Course day: Day17\\nDetails: /cmse802-FS26/Schedule/17-class-re
  po-review-checkpoint
 URL:/cmse802-FS26/Schedule/17-class-repo-review-checkpoint
+END:VEVENT
+BEGIN:VEVENT
+UID:316f8d70c392aa4e6c764ad4db4b11a19df9d780@course-website-template
+DTSTAMP:20261210T000000Z
+SUMMARY:Milestone 4: Documentation and Reproducibility Pass
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DESCRIPTION:Course day: Day17\\nDetails: /cmse802-FS26/Schedule/17-next-sun
+ -documentation-reproducibility-milestone
+URL:/cmse802-FS26/Schedule/17-next-sun-documentation-reproducibility-milest
+ one
 END:VEVENT
 BEGIN:VEVENT
 UID:5b976b7f410503e4ca866bfebca5696c206f3d48@course-website-template

@@ -1,7 +1,8 @@
 ---
 layout: schedule
-date: '2026-10-25'
+date: '2026-11-01'
 ---
+
 
 # Milestone 4: Documentation and Reproducibility Pass
 

@@ -118,12 +118,6 @@
   url: /Schedule/16-class-physical-modeling-day-4
   event_type: class
   day_id: Day16
-- date: '2026-10-25'
-  week_start: '2026-10-19'
-  title: 'Milestone 4: Documentation and Reproducibility Pass'
-  url: /Schedule/16-next-sun-documentation-reproducibility-milestone
-  event_type: next
-  day_id: Day16
 - date: '2026-10-26'
   week_start: '2026-10-26'
   title: Fall Break
@@ -141,6 +135,12 @@
   title: Repository Review Checkpoint
   url: /Schedule/17-class-repo-review-checkpoint
   event_type: class
+  day_id: Day17
+- date: '2026-11-01'
+  week_start: '2026-10-26'
+  title: 'Milestone 4: Documentation and Reproducibility Pass'
+  url: /Schedule/17-next-sun-documentation-reproducibility-milestone
+  event_type: next
   day_id: Day17
 - date: '2026-11-03'
   week_start: '2026-11-02'
