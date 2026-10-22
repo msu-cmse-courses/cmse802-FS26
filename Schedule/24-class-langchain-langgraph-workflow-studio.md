@@ -1,6 +1,6 @@
 ---
 layout: schedule
-published: true
+published: false
 date: '2026-11-24'
 ---
 
