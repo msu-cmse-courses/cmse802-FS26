@@ -256,12 +256,14 @@ DESCRIPTION:Course day: Day19\\nDetails: /cmse802-FS26/Schedule/19-class-da
 URL:/cmse802-FS26/Schedule/19-class-data-driven-modeling-day-2
 END:VEVENT
 BEGIN:VEVENT
-UID:415470a677aeb2dadc0bb8e9714df71854c45258@course-website-template
+UID:2f4c1caf8750975429ca15ae14ebd0169b8f174d@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Data Driven Modeling - Day 3
 DTSTART:20261110T123000
 DTEND:20261110T134000
-DESCRIPTION:Course day: Day20
+DESCRIPTION:Course day: Day20\\nDetails: /cmse802-FS26/Schedule/20-class-da
+ ta-driven-modeling-day-3
+URL:/cmse802-FS26/Schedule/20-class-data-driven-modeling-day-3
 END:VEVENT
 BEGIN:VEVENT
 UID:7dd0787b15e4038569a11120dbd80f596b7a4d2d@course-website-template
