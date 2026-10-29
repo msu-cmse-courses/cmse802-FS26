@@ -264,12 +264,14 @@ DTEND:20261110T134000
 DESCRIPTION:Course day: Day20
 END:VEVENT
 BEGIN:VEVENT
-UID:2780c806cf1f311be49cd7ef2b0ab9f6cdabec55@course-website-template
+UID:7dd0787b15e4038569a11120dbd80f596b7a4d2d@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Data Driven Modeling - Day 4
 DTSTART:20261112T123000
 DTEND:20261112T134000
-DESCRIPTION:Course day: Day21
+DESCRIPTION:Course day: Day21\\nDetails: /cmse802-FS26/Schedule/21-class-da
+ ta-driven-modeling-day-4
+URL:/cmse802-FS26/Schedule/21-class-data-driven-modeling-day-4
 END:VEVENT
 BEGIN:VEVENT
 UID:eb713fd5c0182409f8d0cc9c79a3ab2417d9a4ac@course-website-template
