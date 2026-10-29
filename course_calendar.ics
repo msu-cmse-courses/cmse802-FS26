@@ -236,20 +236,24 @@ URL:/cmse802-FS26/Schedule/17-next-sun-documentation-reproducibility-milest
  one
 END:VEVENT
 BEGIN:VEVENT
-UID:5b976b7f410503e4ca866bfebca5696c206f3d48@course-website-template
+UID:33a56e0e7416d58b8a29a042ec8cb3088d14e8d0@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:Data Driven Modeling - Day 1
 DTSTART:20261103T123000
 DTEND:20261103T134000
-DESCRIPTION:Course day: Day18
+DESCRIPTION:Course day: Day18\\nDetails: /cmse802-FS26/Schedule/18-class-da
+ ta-driven-modeling-day-1
+URL:/cmse802-FS26/Schedule/18-class-data-driven-modeling-day-1
 END:VEVENT
 BEGIN:VEVENT
-UID:6f421362febe7b878a8299e2e74f5ca621203c91@course-website-template
+UID:b550ea6867999ff545bf8588a48167498a8b79c9@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Data Driven Modeling - Day 1
+SUMMARY:Data Driven Modeling - Day 2
 DTSTART:20261105T123000
 DTEND:20261105T134000
-DESCRIPTION:Course day: Day19
+DESCRIPTION:Course day: Day19\\nDetails: /cmse802-FS26/Schedule/19-class-da
+ ta-driven-modeling-day-2
+URL:/cmse802-FS26/Schedule/19-class-data-driven-modeling-day-2
 END:VEVENT
 BEGIN:VEVENT
 UID:415470a677aeb2dadc0bb8e9714df71854c45258@course-website-template
