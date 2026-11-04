@@ -334,14 +334,14 @@ DTEND:20261201T134000
 DESCRIPTION:Course day: Day25
 END:VEVENT
 BEGIN:VEVENT
-UID:01eeabd21d248ab13d6eb9274575ca269ee3e9d2@course-website-template
+UID:6bc7b8579bdb12561809c39e394193ac25ee4719@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Final Project Code Review - Day 3
+SUMMARY:Final Project Code Review
 DTSTART:20261203T123000
 DTEND:20261203T134000
 DESCRIPTION:Course day: Day26\\nDetails: /cmse802-FS26/Schedule/26-class-fi
- nal-project-code-review-day-3
-URL:/cmse802-FS26/Schedule/26-class-final-project-code-review-day-3
+ nal-project-code-review
+URL:/cmse802-FS26/Schedule/26-class-final-project-code-review
 END:VEVENT
 BEGIN:VEVENT
 UID:73394c7ff9e2b7dc1ad9bda4e10fe6c52de34a64@course-website-template

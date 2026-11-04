@@ -8,7 +8,7 @@ Use this card to record evidence while you review a project published in the Jou
 
 Keep the completed card with your project reflections. Record observations that another reviewer could verify from the paper, repository, release, or commands you ran.
 
-[Use this link to get to the raw Markdown text for this file](https://github.com/msu-cmse-courses/cmse802-FS26/raw/refs/heads/main/Guide/22-JOSS-Software-Review-Card.md)
+[Use this link to get to the raw Markdown text for this file]({{ site.github.repository_url }}/raw/refs/heads/main/Guide/22-JOSS-Software-Review-Card.md)
 
 ---
 

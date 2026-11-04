@@ -210,8 +210,8 @@
   day_id: Day25
 - date: '2026-12-03'
   week_start: '2026-11-30'
-  title: Final Project Code Review - Day 3
-  url: /Schedule/26-class-final-project-code-review-day-3
+  title: Final Project Code Review
+  url: /Schedule/26-class-final-project-code-review
   event_type: class
   day_id: Day26
 - date: '2026-12-06'
