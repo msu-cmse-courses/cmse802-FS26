@@ -286,17 +286,19 @@ DESCRIPTION:Course day: Day21\\nDetails: /cmse802-FS26/Schedule/21-next-sun
 URL:/cmse802-FS26/Schedule/21-next-sun-project-systems-milestone
 END:VEVENT
 BEGIN:VEVENT
-UID:f4414413e60d0939500cfa1c0222db725fe338a0@course-website-template
+UID:e317ba978847803797ca19bf185a242561b1c08e@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Final Project Code Review - Day 1
+SUMMARY:JOSS Software Review Studio
 DTSTART:20261117T123000
 DTEND:20261117T134000
-DESCRIPTION:Course day: Day22
+DESCRIPTION:Course day: Day22\\nDetails: /cmse802-FS26/Schedule/22-class-jo
+ ss-software-review-day-1
+URL:/cmse802-FS26/Schedule/22-class-joss-software-review-day-1
 END:VEVENT
 BEGIN:VEVENT
-UID:0b5c6c50187f3ba9c11abeee89ffb16dc85502d9@course-website-template
+UID:8a734b433702684a58e4d9533928f1858920f900@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Final Project Code Review - Day 2
+SUMMARY:JOSS Software Review Presentations and Project Transfer
 DTSTART:20261119T123000
 DTEND:20261119T134000
 DESCRIPTION:Course day: Day23

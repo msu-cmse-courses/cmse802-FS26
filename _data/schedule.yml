@@ -174,13 +174,13 @@
   day_id: Day21
 - date: '2026-11-17'
   week_start: '2026-11-16'
-  title: Final Project Code Review - Day 1
-  url: null
+  title: JOSS Software Review Studio
+  url: /Schedule/22-class-joss-software-review-day-1
   event_type: class
   day_id: Day22
 - date: '2026-11-19'
   week_start: '2026-11-16'
-  title: Final Project Code Review - Day 2
+  title: JOSS Software Review Presentations and Project Transfer
   url: null
   event_type: class
   day_id: Day23
