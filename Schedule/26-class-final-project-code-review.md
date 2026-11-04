@@ -5,7 +5,7 @@ date: '2026-12-03'
 ---
 
 
-# Final Project Code Review - Day 3
+# Final Project Code Review
 
 This is the final in-class review before final project submission and presentations. Use the review to confirm that another researcher can understand the project, run its central workflow, evaluate its evidence, and see what remains outside the current scope.
 
