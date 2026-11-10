@@ -35,6 +35,17 @@ Plan for approximately **10 minutes** for your presentation. A small amount of f
 
 Show only work that is represented accurately in your final repository and documentation. If your project uses restricted data or services, demonstrate a shareable synthetic, example, or mock workflow instead.
 
+## Presentation Technology
+
+The classroom computer will be set up with Zoom, using the same presentation workflow used throughout the semester. Choose the option that best supports your presentation and demonstration:
+
+1. Open your slides on the classroom computer and share that screen.
+2. Connect to the classroom Zoom meeting from your own laptop and share your screen.
+
+If you use your own laptop, confirm before your presentation that you can join the Zoom meeting, turn off both your microphone and speakers to prevent audio feedback, and share your screen. Using your own laptop is encouraged when it will make a project demonstration smoother.
+
+As an alternative, send the instructor a presentation URL before your scheduled presentation. The instructor can add the link to the presentation-order slide and open it from the classroom computer.
+
 ## Presentation Order and Peer Evaluation
 
 The class slide will list presenters in order. It will also identify the three students assigned to review each presentation. Follow that slide for both presentation order and reviewer assignments.
