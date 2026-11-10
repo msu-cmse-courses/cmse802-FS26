@@ -296,20 +296,24 @@ DESCRIPTION:Course day: Day22\\nDetails: /cmse802-FS26/Schedule/22-class-jo
 URL:/cmse802-FS26/Schedule/22-class-joss-software-review-day-1
 END:VEVENT
 BEGIN:VEVENT
-UID:8a734b433702684a58e4d9533928f1858920f900@course-website-template
+UID:c30c869183a16be6f25b0582588de60b6445716b@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:JOSS Software Review Presentations and Project Transfer
 DTSTART:20261119T123000
 DTEND:20261119T134000
-DESCRIPTION:Course day: Day23
+DESCRIPTION:Course day: Day23\\nDetails: /cmse802-FS26/Schedule/23-class-jo
+ ss-software-review-day-2
+URL:/cmse802-FS26/Schedule/23-class-joss-software-review-day-2
 END:VEVENT
 BEGIN:VEVENT
-UID:a24949050dd7b5162989453f74b1f9b750e10837@course-website-template
+UID:76ca4546a1a43a8dcf4cb1549be0589294a23c48@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:LangChain and LangGraph - Day 1
 DTSTART:20261124T123000
 DTEND:20261124T134000
-DESCRIPTION:Course day: Day24
+DESCRIPTION:Course day: Day24\\nDetails: /cmse802-FS26/Schedule/24-class-la
+ ngchain-langgraph-workflow-studio
+URL:/cmse802-FS26/Schedule/24-class-langchain-langgraph-workflow-studio
 END:VEVENT
 BEGIN:VEVENT
 UID:39a982c164b5c52f71ae3baa3f145f056fc18dcd@course-website-template
@@ -326,12 +330,14 @@ DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 END:VEVENT
 BEGIN:VEVENT
-UID:6c32efdb52c305327b5574fecb85c7c94dccb4f8@course-website-template
+UID:5363745c2636d03af5eda474cfa927e38e5bb594@course-website-template
 DTSTAMP:20261210T000000Z
 SUMMARY:LangChain and LangGraph - Day 2
 DTSTART:20261201T123000
 DTEND:20261201T134000
-DESCRIPTION:Course day: Day25
+DESCRIPTION:Course day: Day25\\nDetails: /cmse802-FS26/Schedule/25-class-la
+ ngchain-langgraph-day-2
+URL:/cmse802-FS26/Schedule/25-class-langchain-langgraph-day-2
 END:VEVENT
 BEGIN:VEVENT
 UID:6bc7b8579bdb12561809c39e394193ac25ee4719@course-website-template
@@ -354,19 +360,23 @@ DESCRIPTION:Course day: Day25\\nDetails: /cmse802-FS26/Schedule/25-next-sun
 URL:/cmse802-FS26/Schedule/25-next-sun-final-project-submission-milestone
 END:VEVENT
 BEGIN:VEVENT
-UID:a6717ba8eec2bef3af4ce10169ef5f424617bc7e@course-website-template
+UID:c6bc7c4abe93bbf72c6e87e0328950595b0285b4@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Final Presntations - Day 1
+SUMMARY:Final Presentations - Day 1
 DTSTART:20261208T123000
 DTEND:20261208T134000
-DESCRIPTION:Course day: Day27
+DESCRIPTION:Course day: Day27\\nDetails: /cmse802-FS26/Schedule/27-class-Fi
+ nal-Presentations-Day1
+URL:/cmse802-FS26/Schedule/27-class-Final-Presentations-Day1
 END:VEVENT
 BEGIN:VEVENT
-UID:bd822be2a9e166a43de2ddc922aab62ee395a96c@course-website-template
+UID:b4346e5294bfe1e3e940dad985549d3971817740@course-website-template
 DTSTAMP:20261210T000000Z
-SUMMARY:Final Presntations - Day 2
+SUMMARY:Final Presentations - Day 2
 DTSTART:20261210T123000
 DTEND:20261210T134000
-DESCRIPTION:Course day: Day28
+DESCRIPTION:Course day: Day28\\nDetails: /cmse802-FS26/Schedule/28-class-Fi
+ nal-Presentations-Day2
+URL:/cmse802-FS26/Schedule/28-class-Final-Presentations-Day2
 END:VEVENT
 END:VCALENDAR
