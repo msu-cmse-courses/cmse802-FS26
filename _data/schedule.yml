@@ -232,3 +232,9 @@
   url: /Schedule/28-class-Final-Presentations-Day2
   event_type: class
   day_id: Day28
+- date: '2026-12-13'
+  week_start: '2026-12-07'
+  title: Extended Deadline
+  url: /Schedule/28-next-sun-extended-deadline
+  event_type: next
+  day_id: Day28
