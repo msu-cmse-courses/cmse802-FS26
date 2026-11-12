@@ -44,7 +44,7 @@ The classroom computer will be set up with Zoom, using the same presentation wor
 
 If you use your own laptop, confirm before your presentation that you can join the Zoom meeting, turn off both your microphone and speakers to prevent audio feedback, and share your screen. Using your own laptop is encouraged when it will make a project demonstration smoother.
 
-As an alternative, send the instructor a presentation URL before your scheduled presentation. The instructor can add the link to the presentation-order slide and open it from the classroom computer.
+As an alternative, send the instructor a presentation URL or file before your scheduled presentation. The instructor can add the link to the presentation-order slide and open it from the classroom computer.
 
 ## Presentation Order and Peer Evaluation
 

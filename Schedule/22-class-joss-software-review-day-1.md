@@ -56,7 +56,7 @@ Use the Safe, Portable, Reproducible, Robust, and Literate (SPRRL) framework:
 - **Robust:** Are tests, validation checks, or understandable failure paths available?
 - **Literate:** Can a future researcher understand the project purpose, workflow, outputs, and limitations?
 
-## Prepare for Day 23
+## Prepare for next class
 
 Prepare a two-minute presentation that names the project, explains what it does, shares one observed strength and one improvement opportunity, and identifies one practice you will apply to your own project.
 
