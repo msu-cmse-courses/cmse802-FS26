@@ -54,7 +54,6 @@ Before leaving class, add one feasible improvement to your release-candidate fix
 ## Before Next Class
 
 - Keep your completed [JOSS Software Review Card](../Guide/22-JOSS-Software-Review-Card.md) with your project reflections.
-- Complete the [Release Candidate and Handoff Package](../22-next-sun-release-candidate-milestone.md) before its deadline.
 - Implement or document progress on the improvement identified during this activity.
 
 ## Daily Check-in and Reflection
